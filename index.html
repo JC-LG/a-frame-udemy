@@ -13,17 +13,20 @@
     <!--  Box Primitive  -->
     <!--  https://aframe.io/docs/1.6.0/components/geometry.html#box  -->
     <!--  position: x y z  -->
-    <!--  16:9 Panel - the width is divisible by 16 and the height is divisible by 9  -->
+    <!--  2:1 Panel - the width is divisible by 16 and the height is divisible by 9  -->
     <a-box color="#689F38"
-           width="8"
-           height="4.5"
+           width="4"
+           height="2"
            depth="0.2"
-           position="0 3 -7">
+           position="0 1 -7"
+           rotation="90 0 0"
+        >
         <!--  Circle | Child Entity  -->
         <!--  Relative Position: Inherits from parent  -->
         <a-circle color="#333333"
-                  position="2 0 0.11"
                   side="double"
+                  position="2 0 0"
+                  rotation="90 0 0"
         >
         </a-circle>
     </a-box>
@@ -32,7 +35,7 @@
     <!--  Global Position  -->
     <a-circle color="#FFC107"
               side="double"
-              position="-2 3 -6.89"
+              position="-2 1 -7"
     >
     </a-circle>
 
@@ -44,6 +47,8 @@
                 segments-radial="6"
                 open-ended="true"
                 side="double"
+                position="0 1 0"
+                rotation="0 -90 90"
     ></a-cylinder>
 </a-scene>
 <script type="module" src="/src/main.js"></script>
