@@ -1,33 +1,51 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-<!--    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>-->
+<head>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <!--    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>-->
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>A-Frane</title>
-  </head>
-  <body>
-    <a-scene>
-      <!--  Box Primitive  -->
-      <!--  https://aframe.io/docs/1.6.0/components/geometry.html#box  -->
-      <a-box color="#689F38"
-             width="7"
-             height="2.5"
-             depth="1"
-      ></a-box>
-
-      <!--  Cylinder Primitive  -->
-      <!--  https://aframe.io/docs/1.6.0/components/geometry.html#cylinder  -->
-      <a-cylinder color="#616161"
-                  height="2"
-                  radius="2"
-                  segments-radial="6"
-                  open-ended="true"
+</head>
+<body>
+<a-scene>
+    <!--  Box Primitive  -->
+    <!--  https://aframe.io/docs/1.6.0/components/geometry.html#box  -->
+    <!--  position: x y z  -->
+    <!--  16:9 Panel - the width is divisible by 16 and the height is divisible by 9  -->
+    <a-box color="#689F38"
+           width="8"
+           height="4.5"
+           depth="0.2"
+           position="0 3 -7">
+        <!--  Circle | Child Entity  -->
+        <!--  Relative Position: Inherits from parent  -->
+        <a-circle color="#333333"
+                  position="2 0 0.11"
                   side="double"
-      ></a-cylinder>
-    </a-scene>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+        >
+        </a-circle>
+    </a-box>
+
+    <!--  Circle :   -->
+    <!--  Global Position  -->
+    <a-circle color="#FFC107"
+              side="double"
+              position="-2 3 -6.89"
+    >
+    </a-circle>
+
+    <!--  Cylinder Primitive  -->
+    <!--  https://aframe.io/docs/1.6.0/components/geometry.html#cylinder  -->
+    <a-cylinder color="#616161"
+                height="2"
+                radius="2"
+                segments-radial="6"
+                open-ended="true"
+                side="double"
+    ></a-cylinder>
+</a-scene>
+<script type="module" src="/src/main.js"></script>
+</body>
 </html>
