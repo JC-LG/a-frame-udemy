@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A-Frane</title>
+</head>
+<body>
+<a-scene>
+    <!--  Box Primitive  -->
+    <!--  https://aframe.io/docs/1.6.0/components/geometry.html#box  -->
+    <!--  position: x y z  -->
+    <!--  2:1 Panel - the width is divisible by 16 and the height is divisible by 9  -->
+    <a-box color="#689F38"
+           width="4"
+           height="2"
+           depth="0.2"
+           position="0 1 -7"
+           rotation="90 0 0"
+        >
+        <!--  Circle | Child Entity  -->
+        <!--  Relative Position: Inherits from parent  -->
+        <a-circle color="#333333"
+                  side="double"
+                  position="2 0 0"
+                  rotation="90 0 0"
+        >
+        </a-circle>
+    </a-box>
+
+    <!--  Circle :   -->
+    <!--  Global Position  -->
+    <a-circle color="#FFC107"
+              side="double"
+              position="-2 1 -7"
+    >
+    </a-circle>
+
+    <!--  Cylinder Primitive  -->
+    <!--  https://aframe.io/docs/1.6.0/components/geometry.html#cylinder  -->
+    <a-cylinder color="#616161"
+                height="2"
+                radius="2"
+                segments-radial="6"
+                open-ended="true"
+                side="double"
+                position="0 1 0"
+                rotation="0 -90 90"
+    ></a-cylinder>
+</a-scene>
+</body>
+</html>
