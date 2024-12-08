@@ -3,53 +3,75 @@
 <head>
     <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
     <!--    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>-->
-
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>A-Frane</title>
+    <title>A-Frame</title>
 </head>
 <body>
 <a-scene>
-    <!--  Box Primitive  -->
-    <!--  https://aframe.io/docs/1.6.0/components/geometry.html#box  -->
-    <!--  position: x y z  -->
-    <!--  2:1 Panel - the width is divisible by 16 and the height is divisible by 9  -->
-    <a-box color="#689F38"
+
+    <!--  Asset Management System: Preload and Cache  -->
+    <a-assets>
+        <img id="rock-normal" src="/textures/s3-c8/TCom_Rock_CliffLayered_1.5x1.5_1K_albedo_NormalMap.png" />
+
+        <img id="stone-material" src="/textures/s3-c8/TCom_Wall_Stone3_2x2_1K_albedo.jpeg" />
+        <img id="stone-normal" src="/textures/s3-c8/TCom_Wall_Stone3_2x2_1K_albedo_NormalMap.png" />
+    </a-assets>
+
+    <!--  Light-Blue Box  -->
+    <a-box color="#FFFFFF"
+           src="/textures/s3-c8/TCom_Rock_CliffLayered_1.5x1.5_1K_albedo.jpeg"
+           normal-map="#rock-normal"
+           normal-texture-repeat="1 1"
+           normal-scale="1 -1"
+           roughness="0.5"
+           repeat="1 1"
            width="4"
-           height="2"
-           depth="0.2"
-           position="0 1 -7"
-           rotation="90 0 0"
-        >
-        <!--  Circle | Child Entity  -->
-        <!--  Relative Position: Inherits from parent  -->
-        <a-circle color="#333333"
-                  side="double"
-                  position="2 0 0"
-                  rotation="90 0 0"
-        >
-        </a-circle>
+           height="4"
+           depth="4"
+           position="-2 1.5 -9"
+           scale="1 1 1"
+           side="back"
+    >
+    </a-box>
+    <!--  Brown Box  -->
+    <a-box material="
+           color: #FFFFFF;
+           src: #stone-material;
+           repeat: 4 4;
+           normal-map: #stone-normal;
+           normal-texture-repeat: 4 4;
+           normal-scale: 1 -1;
+           roughness: 0.7;
+           "
+           width="4"
+           height="4"
+           depth="4"
+           position="2 1.5 -9"
+           scale="1 1 1"
+           side="back"
+    >
     </a-box>
 
-    <!--  Circle :   -->
-    <!--  Global Position  -->
-    <a-circle color="#FFC107"
-              side="double"
-              position="-2 1 -7"
-    >
-    </a-circle>
+    <!--  Blue Sphere | Flat Material  -->
+    <a-sphere position="-2 1.5 -9"
+              radius="0.5"
+              roughness="0.2"
+              opacity=".7"
+              color="#0000AA"
+              shader="standard"
+    ></a-sphere>
 
-    <!--  Cylinder Primitive  -->
-    <!--  https://aframe.io/docs/1.6.0/components/geometry.html#cylinder  -->
-    <a-cylinder color="#616161"
-                height="2"
-                radius="2"
-                segments-radial="6"
-                open-ended="true"
-                side="double"
-                position="0 1 0"
-                rotation="0 -90 90"
-    ></a-cylinder>
+    <!--  Red Sphere | Flat Material  -->
+    <a-sphere position="2 1.5 -9"
+              radius="0.5"
+              material="
+              color: #AA0000;
+              roughness: 0.2;
+              shader: flat;
+              "
+    ></a-sphere>
+
 </a-scene>
 <script type="module" src="/src/main.js"></script>
 </body>
