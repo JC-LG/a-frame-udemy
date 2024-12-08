@@ -83,3 +83,15 @@ With these rotation applied, now we need to `scale`:
 
 ![s3-c7-r3.png](renders%2Fs3-c7-r3.png)
 
+#### 8. Image textures and materials
+- https://www.textures.com/
+- https://xo3d.co.uk/tools/normal-map-creator/
+
+##### Normal Maps: 
+In 3D computer graphics, normal mapping, or Dot3 bump mapping, is a texture mapping technique used for 
+faking the lighting of bumps and dents – an implementation of bump mapping. It is used to add details without using 
+more polygons.A common use of this technique is to greatly enhance the appearance and details of a low polygon model 
+by generating a normal map from a high polygon model or height map.
+
+![s3-c8.png](renders%2Fs3-c8.png)
+
