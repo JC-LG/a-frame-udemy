@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>A-Frane</title>
+    <title>A-Frame</title>
 </head>
 <body>
 <a-scene>
@@ -14,12 +14,14 @@
     <!--  https://aframe.io/docs/1.6.0/components/geometry.html#box  -->
     <!--  position: x y z  -->
     <!--  2:1 Panel - the width is divisible by 16 and the height is divisible by 9  -->
+    <!--  Relative Scale  -->
     <a-box color="#689F38"
            width="4"
            height="2"
            depth="0.2"
            position="0 1 -7"
            rotation="90 0 0"
+           scale="-1 1 2"
         >
         <!--  Circle | Child Entity  -->
         <!--  Relative Position: Inherits from parent  -->
@@ -31,16 +33,19 @@
         </a-circle>
     </a-box>
 
-    <!--  Circle :   -->
+    <!--  Yellow Circle   -->
     <!--  Global Position  -->
     <a-circle color="#FFC107"
               side="double"
-              position="-2 1 -7"
+              position="-2 1 -8"
+              scale="2 2 1"
     >
     </a-circle>
 
     <!--  Cylinder Primitive  -->
     <!--  https://aframe.io/docs/1.6.0/components/geometry.html#cylinder  -->
+    <!--  Scale X:Y being impacted by the Rotation transformation -->
+
     <a-cylinder color="#616161"
                 height="2"
                 radius="2"
@@ -49,6 +54,7 @@
                 side="double"
                 position="0 1 0"
                 rotation="0 -90 90"
+                scale="2 2 2"
     ></a-cylinder>
 </a-scene>
 <script type="module" src="/src/main.js"></script>
