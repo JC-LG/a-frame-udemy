@@ -8,71 +8,28 @@
     <title>A-Frame</title>
 </head>
 <body>
-<a-scene>
 
-    <!--  Asset Management System: Preload and Cache  -->
+<a-scene stats>
     <a-assets>
-        <img id="rock-normal" src="/textures/s3-c8/TCom_Rock_CliffLayered_1.5x1.5_1K_albedo_NormalMap.png" />
-
-        <img id="stone-material" src="/textures/s3-c8/TCom_Wall_Stone3_2x2_1K_albedo.jpeg" />
-        <img id="stone-normal" src="/textures/s3-c8/TCom_Wall_Stone3_2x2_1K_albedo_NormalMap.png" />
+        <a-asset-item id="imac" src="./models/imac_24_m1_green_2021.glb"></a-asset-item>
     </a-assets>
 
-    <!--  Light-Blue Box  -->
-    <a-box color="#FFFFFF"
-           src="/textures/s3-c8/TCom_Rock_CliffLayered_1.5x1.5_1K_albedo.jpeg"
-           normal-map="#rock-normal"
-           normal-texture-repeat="1 1"
-           normal-scale="1 -1"
-           roughness="0.5"
-           repeat="1 1"
-           width="4"
-           height="4"
-           depth="4"
-           position="-2 1.5 -9"
-           scale="1 1 1"
-           side="back"
-    >
-    </a-box>
-    <!--  Brown Box  -->
-    <a-box material="
-           color: #FFFFFF;
-           src: #stone-material;
-           repeat: 4 4;
-           normal-map: #stone-normal;
-           normal-texture-repeat: 4 4;
-           normal-scale: 1 -1;
-           roughness: 0.7;
-           "
-           width="4"
-           height="4"
-           depth="4"
-           position="2 1.5 -9"
-           scale="1 1 1"
-           side="back"
-    >
-    </a-box>
+    <a-entity
+            roughness="0.2"
+            scale="0.01 0.01 0.01"
+            position="0 -15 -55"
+            gltf-model="#imac">
 
-    <!--  Blue Sphere | Flat Material  -->
-    <a-sphere position="-2 1.5 -9"
-              radius="0.5"
-              roughness="0.2"
-              opacity=".7"
-              color="#0000AA"
-              shader="standard"
-    ></a-sphere>
-
-    <!--  Red Sphere | Flat Material  -->
-    <a-sphere position="2 1.5 -9"
-              radius="0.5"
-              material="
-              color: #AA0000;
-              roughness: 0.2;
-              shader: flat;
-              "
-    ></a-sphere>
+    </a-entity>
 
 </a-scene>
+
+<!-- https://gltf-viewer.donmccurdy.com/ -->
+<!-- https://aframe.io/docs/1.6.0/components/gltf-model.html -->
+<!-- https://aframe.io/docs/1.6.0/introduction/models.html -->
+<!-- https://ar-code.com/blog/video-tutorial-how-to-compress-reduce-the-file-size-of-a-3d-model-on-blender-glb-gltf-dae-fbx-obj -->
+<!-- https://www.youtube.com/watch?v=WHKFjQ7jGJA -->
+
 <script type="module" src="/src/main.js"></script>
 </body>
 </html>
