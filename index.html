@@ -1,35 +1,39 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
-    <!--    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>-->
+    <link rel="icon" href="/favicon.ico" />
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>A-Frame</title>
+    <title>AOIS</title>
 </head>
 <body>
 
-<a-scene stats>
+<a-scene stats loading-screen="dotsColor: lightgrey; backgroundColor: black">
     <a-assets>
-        <a-asset-item id="imac" src="./models/imac_24_m1_green_2021.glb"></a-asset-item>
+        <a-asset-item id="apple-store" src="/models/apple-immersive-store.glb"></a-asset-item>
+        <img id="stone" src="/textures/TCom_Wall_Stone3_2x2_1K_albedo.jpeg">
+        <img id="stone-normal" src="/textures/TCom_Wall_Stone3_2x2_1K_albedo_NormalMap.png" />
+        <img id="sky" src="/images/blue-sky.jpg" />
     </a-assets>
 
-    <a-entity
-            roughness="0.2"
-            scale="0.01 0.01 0.01"
-            position="0 -15 -55"
-            gltf-model="#imac">
-
+    <a-entity scale="1 1 1"
+              position="3 0 -0.5"
+              rotation="0 -20 0"
+              gltf-model="#apple-store">
     </a-entity>
+    <a-plane src="#stone"
+             normal-map="#rock-normal"
+             normal-texture-repeat="100 100"
+             normal-scale="1 -1"
+             roughness="0.5"
+             repeat="100 100"
+             height="50"
+             width="50"
+             rotation="-90 0 0">
+    </a-plane>
+    <a-sky src="#sky" radius="100" position="0 98 -10" ></a-sky>
 
 </a-scene>
-
-<!-- https://gltf-viewer.donmccurdy.com/ -->
-<!-- https://aframe.io/docs/1.6.0/components/gltf-model.html -->
-<!-- https://aframe.io/docs/1.6.0/introduction/models.html -->
-<!-- https://ar-code.com/blog/video-tutorial-how-to-compress-reduce-the-file-size-of-a-3d-model-on-blender-glb-gltf-dae-fbx-obj -->
-<!-- https://www.youtube.com/watch?v=WHKFjQ7jGJA -->
-
 <script type="module" src="/src/main.js"></script>
 </body>
 </html>
