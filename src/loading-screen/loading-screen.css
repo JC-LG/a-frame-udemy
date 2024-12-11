@@ -1,0 +1,53 @@
+@keyframes anim__hello {
+    0% {
+        stroke-dashoffset: 5800;
+    }
+    25% {
+        stroke-dashoffset: 5800;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.new__bg {
+    height: 100%;
+    min-height: 500px;
+    background: linear-gradient(
+            217deg,
+            rgb(4, 26, 134),
+            rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgb(147, 3, 147), rgba(0, 255, 0, 0) 65%),
+    linear-gradient(336deg, rgb(166, 125, 7), rgba(0, 0, 255, 0) 70.71%);
+    display: flex;
+    justify-content: center;
+}
+
+.hello__div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.hello__svg {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 48px;
+    stroke-dasharray: 5800px;
+    stroke-dashoffset: 5800px;
+    animation: anim__hello linear 4s forwards;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+}

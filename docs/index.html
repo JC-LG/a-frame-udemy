@@ -1,40 +1,14 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <link rel="icon" href="./favicon.ico" />
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>AOIS</title>
-  <script type="module" crossorigin src="./assets/index-_1fAxG8x.js"></script>
-</head>
-<body>
-
-<a-scene renderer="colorManagement: true;" stats loading-screen="dotsColor: lightgrey; backgroundColor: black">
-    <a-assets>
-<!--        <a-asset-item id="apple-store" src="./models/apple-immersive-store-comp.glb"></a-asset-item>-->
-        <a-asset-item id="apple-store" src="./models/apple_store.glb"></a-asset-item>
-        <img id="stone" src="./textures/TCom_Wall_Stone3_2x2_1K_albedo.jpeg">
-        <img id="stone-normal" src="./textures/TCom_Wall_Stone3_2x2_1K_albedo_NormalMap.png" />
-        <img id="sky" src="./images/blue-sky.jpg" />
-    </a-assets>
-
-    <a-entity scale="1 1 1"
-              position="3 0 -0.5"
-              rotation="0 -80 0"
-              gltf-model="#apple-store">
-    </a-entity>
-    <a-plane src="#stone"
-             normal-map="#rock-normal"
-             normal-texture-repeat="100 100"
-             normal-scale="1 -1"
-             roughness="0.5"
-             repeat="100 100"
-             height="50"
-             width="50"
-             rotation="-90 0 0">
-    </a-plane>
-    <a-sky src="#sky" radius="100" position="0 98 -10" ></a-sky>
-
-</a-scene>
-</body>
+    <head>
+        <link rel="icon" href="./favicon.ico" />
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>AOIS</title>
+      <script type="module" crossorigin src="./assets/index-7Jbbpt3p.js"></script>
+      <link rel="stylesheet" crossorigin href="./assets/index-Da3jwKTX.css">
+    </head>
+    <body>
+        <div id="app"></div>
+    </body>
 </html>

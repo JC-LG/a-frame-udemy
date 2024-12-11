@@ -1,5 +1,5 @@
 {
-  "name": "a-frame-udemy",
+  "name": "aois",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,6 +16,8 @@
     "node": "20.x.x"
   },
   "dependencies": {
-    "aframe": "^1.6.0"
+    "aframe": "^1.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
