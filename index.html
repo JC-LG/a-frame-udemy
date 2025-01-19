@@ -12,51 +12,19 @@
 
     <!--  Asset Management System: Preload and Cache  -->
     <a-assets>
-        <img id="nanakusa-nazuna" src="/images/s3-c10/nanakusa-nazuna.png" />
+        <img id="floor" src="/textures/s3-c8/TCom_Wall_Stone3_2x2_1K_albedo.jpeg" />
+        <img id="floor-normal-map" src="/textures/s3-c8/TCom_Wall_Stone3_2x2_1K_albedo_NormalMap.png" />
     </a-assets>
 
-    <!--  Background Image  -->
-    <a-image src="#nanakusa-nazuna" position=" 0 1.6 -11" scale="12 7 1"></a-image>
-
-    <!--  PRIMITIVES  -->
-    <!--  Under the hood, they are ENTITIES with a semantic name  -->
-    <!--  that have a preset bundle of COMPONENTS with default values  -->
-    <!--  and map HTML attributes to component data  -->
-    <a-box color="#AA0000"
-           height="1.5"
-           position="-1 0.5 -4"
-    ></a-box>
-
-    <!--  ENTITIES  -->
-    <!--  They have no appearance, behavior or functionality  -->
-    <!--  until you attach COMPONENTS to them  -->
-    <!--  ENTITY: box  -->
-    <a-entity geometry="primitive:box;
-                        height: 1.5"
-              material="shader: standard;
-                        color: #AA0000"
-              position="1 0.5 -4"
-    ></a-entity>
-
-
-    <!--  Modified ENTITY: curved image  -->
-    <a-entity geometry="primitive: cylinder;
-                        theta-length: 90;
-                        theta-start: 135;
-                        radius: 0.707;
-                        height: 0.833;
-                        open-ended: true;
-                       "
-              material="shader: flat;
-                        color: #FFFFFF;
-                        side: double;
-                        src: #nanakusa-nazuna;
-                       "
-              position="0 1.5 0"
-              scale="-10 9 10"
-    ></a-entity>
-
-
+    <a-plane material="color: #999999;
+                        src: #floor;
+                        repeat: 5 5;
+                        normal-map: #floor-normal-map;
+                        normal-texture-repeat: 5 5;
+                      "
+             rotation="-90 0 0"
+             scale="10 10 1"
+    ></a-plane>
 
 </a-scene>
 <script type="module" src="/src/main.js"></script>

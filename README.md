@@ -13,7 +13,7 @@ https://jc-lg.github.io/a-frame-udemy/
 
 ## Renders
 
-### Section 3:
+### Section 3: Adding anf Modifying HTML Elements
 #### 4. Basic primitives and HTML attributes
 ![s3-c4.png](renders%2Fs3-c4.png)
 
@@ -117,3 +117,26 @@ until you attach `COMPONENTS` to them
 ![s3-c10-2.png](renders%2Fs3-c10-2.png)
 
 ![s3-c10-3.png](renders%2Fs3-c10-3.png)
+
+### Section 4: Modifying the Virtual Environment
+#### 11. Ground
+
+```html
+<a-scene>
+    <a-assets>
+        <img id="floor" src="/textures/s3-c8/TCom_Wall_Stone3_2x2_1K_albedo.jpeg" />
+        <img id="floor-normal-map" src="/textures/s3-c8/TCom_Wall_Stone3_2x2_1K_albedo_NormalMap.png" />
+    </a-assets>
+    <a-plane material="color: #999999;
+                        src: #floor;
+                        repeat: 5 5;
+                        normal-map: #floor-normal-map;
+                        normal-texture-repeat: 5 5;
+                      "
+             rotation="-90 0 0"
+             scale="10 10 1"
+    ></a-plane>
+</a-scene>
+```
+![s4-c11.png](renders%2Fs4-c11.png)
+
