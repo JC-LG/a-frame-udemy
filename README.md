@@ -140,3 +140,41 @@ until you attach `COMPONENTS` to them
 ```
 ![s4-c11.png](renders%2Fs4-c11.png)
 
+#### 12. Sky and 360 Image
+```html
+    <a-assets>
+        <img id="floor" src="/textures/s3-c8/TCom_Wall_Stone3_2x2_1K_albedo.jpeg" />
+        <img id="floor-normal-map" src="/textures/s3-c8/TCom_Wall_Stone3_2x2_1K_albedo_NormalMap.png" />
+        <img id="sky" src="/images/clear-sunny-sky.jpg" />
+    </a-assets>
+
+    <a-sky src="#sky"
+           rotation="0 64 0"
+    ></a-sky>
+
+    <a-plane material="color: #999999;
+                        src: #floor;
+                        repeat: 5000 5000;
+                        normal-map: #floor-normal-map;
+                        normal-texture-repeat: 5000 5000;
+                      "
+             rotation="-90 0 0"
+             scale="10000 10000 1"
+    ></a-plane>
+</a-scene>
+```
+
+![s4-c12.png](renders%2Fs4-c12-1.png)
+
+```html
+<a-scene>
+    <a-assets>
+        <img id="sky-360" src="/images/s4-12/360-degree-panorama-southern-sky.jpg" />
+    </a-assets>
+
+    <a-sky src="#sky-360"></a-sky>
+</a-scene>
+```
+
+![s4-c12-2.png](renders%2Fs4-c12-2.png)
+
