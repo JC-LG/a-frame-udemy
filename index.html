@@ -12,65 +12,51 @@
 
     <!--  Asset Management System: Preload and Cache  -->
     <a-assets>
-        <img id="rock-normal" src="/textures/s3-c8/TCom_Rock_CliffLayered_1.5x1.5_1K_albedo_NormalMap.png" />
-
-        <img id="stone-material" src="/textures/s3-c8/TCom_Wall_Stone3_2x2_1K_albedo.jpeg" />
-        <img id="stone-normal" src="/textures/s3-c8/TCom_Wall_Stone3_2x2_1K_albedo_NormalMap.png" />
+        <img id="nanakusa-nazuna" src="/images/s3-c10/nanakusa-nazuna.png" />
     </a-assets>
 
-    <!--  Light-Blue Box  -->
-    <a-box color="#FFFFFF"
-           src="/textures/s3-c8/TCom_Rock_CliffLayered_1.5x1.5_1K_albedo.jpeg"
-           normal-map="#rock-normal"
-           normal-texture-repeat="1 1"
-           normal-scale="1 -1"
-           roughness="0.5"
-           repeat="1 1"
-           width="4"
-           height="4"
-           depth="4"
-           position="-2 1.5 -9"
-           scale="1 1 1"
-           side="back"
-    >
-    </a-box>
-    <!--  Brown Box  -->
-    <a-box material="
-           color: #FFFFFF;
-           src: #stone-material;
-           repeat: 4 4;
-           normal-map: #stone-normal;
-           normal-texture-repeat: 4 4;
-           normal-scale: 1 -1;
-           roughness: 0.7;
-           "
-           width="4"
-           height="4"
-           depth="4"
-           position="2 1.5 -9"
-           scale="1 1 1"
-           side="back"
-    >
-    </a-box>
+    <!--  Background Image  -->
+    <a-image src="#nanakusa-nazuna" position=" 0 1.6 -11" scale="12 7 1"></a-image>
 
-    <!--  Blue Sphere | Flat Material  -->
-    <a-sphere position="-2 1.5 -9"
-              radius="0.5"
-              roughness="0.2"
-              opacity=".7"
-              color="#0000AA"
-              shader="standard"
-    ></a-sphere>
+    <!--  PRIMITIVES  -->
+    <!--  Under the hood, they are ENTITIES with a semantic name  -->
+    <!--  that have a preset bundle of COMPONENTS with default values  -->
+    <!--  and map HTML attributes to component data  -->
+    <a-box color="#AA0000"
+           height="1.5"
+           position="-1 0.5 -4"
+    ></a-box>
 
-    <!--  Red Sphere | Flat Material  -->
-    <a-sphere position="2 1.5 -9"
-              radius="0.5"
-              material="
-              color: #AA0000;
-              roughness: 0.2;
-              shader: flat;
-              "
-    ></a-sphere>
+    <!--  ENTITIES  -->
+    <!--  They have no appearance, behavior or functionality  -->
+    <!--  until you attach COMPONENTS to them  -->
+    <!--  ENTITY: box  -->
+    <a-entity geometry="primitive:box;
+                        height: 1.5"
+              material="shader: standard;
+                        color: #AA0000"
+              position="1 0.5 -4"
+    ></a-entity>
+
+
+    <!--  Modified ENTITY: curved image  -->
+    <a-entity geometry="primitive: cylinder;
+                        theta-length: 90;
+                        theta-start: 135;
+                        radius: 0.707;
+                        height: 0.833;
+                        open-ended: true;
+                       "
+              material="shader: flat;
+                        color: #FFFFFF;
+                        side: double;
+                        src: #nanakusa-nazuna;
+                       "
+              position="0 1.5 0"
+              scale="-10 9 10"
+    ></a-entity>
+
+
 
 </a-scene>
 <script type="module" src="/src/main.js"></script>

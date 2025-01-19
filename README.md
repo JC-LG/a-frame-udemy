@@ -95,3 +95,25 @@ by generating a normal map from a high polygon model or height map.
 
 ![s3-c8.png](renders%2Fs3-c8.png)
 
+
+#### 9. Image and Curved primitives
+... Pending
+
+
+#### 10. Breaking Primitives Down
+
+##### PRIMITIVES
+Under the hood, they are `<a-entity />` with a semantic name
+that have a preset bundle of `COMPONENTS` with default values
+and map `HTML` attributes to component data.
+
+##### ENTITIES
+They have no appearance, behavior or functionality
+until you attach `COMPONENTS` to them 
+
+
+![s3-c10-1.png](renders%2Fs3-c10-1.png)
+
+![s3-c10-2.png](renders%2Fs3-c10-2.png)
+
+![s3-c10-3.png](renders%2Fs3-c10-3.png)
