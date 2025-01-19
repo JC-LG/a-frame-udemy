@@ -178,3 +178,30 @@ until you attach `COMPONENTS` to them
 
 ![s4-c12-2.png](renders%2Fs4-c12-2.png)
 
+#### 13. Camera Primitive
+The camera position is `0 0 0` but only when you are wearing a headset, 
+in desktop mode `0 1.6 0`
+
+```html
+<a-camera></a-camera>
+```
+
+![s4-c13-1.png](renders%2Fs4-c13-1.png)
+
+![s4-c13-2.png](renders%2Fs4-c13-2.png)
+
+```html
+    <a-camera position="0 1.9 0">
+    </a-camera>
+```
+
+![s4-c13-3.png](renders%2Fs4-c13-3.png)
+
+```html
+    <a-entity id="rig" position="0 2 7" rotation="-25 0 0">
+        <a-camera id="camera"></a-camera>
+    </a-entity>
+```
+
+![s4-c13-4.png](renders%2Fs4-c13-4.png)
+
