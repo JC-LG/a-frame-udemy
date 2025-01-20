@@ -410,3 +410,69 @@ Custom cursor:
 ```
 
 ![s5-c18-2.png](renders%2Fs5-c18-2.png)
+
+#### 19. Event-Set Component
+
+[`aframe-event-set-component`](https://www.npmjs.com/package/aframe-event-set-component) is an 
+A-Frame component to register event listeners that set properties:
+
+```bash
+npm i aframe-event-set-component
+```
+>@NOTE: At the moment of this writing [5.0.0](https://www.npmjs.com/package/aframe-event-set-component/v/5.0.0) is the best option since 5.1.0 is failing.
+
+```javascript
+import 'aframe';
+import 'aframe-event-set-component';
+```
+
+##### `_event` property
+
+```html
+    <a-box id="left-red"
+           color="#AA0000"
+           position="-2 0 -7"
+           event-set__enter="_event: mouseenter; material.color: #FF0000"
+    ></a-box>
+```
+![s5-c19-1.png](renders%2Fs5-c19-1.png)
+
+Here we are using the `__event-set__[placeholder]` component, 
+that use the `_event:` property to listen for  `mouseenter` synthetic event to
+change the `material.color` to brighter red.
+
+![s5-c19-2.png](renders%2Fs5-c19-2.png)
+
+```html
+    <a-box id="left-red"
+           color="#AA0000"
+           position="-2 0 -7"
+           event-set__enter="_event: mouseenter; material.color: #FF0000"
+           event-set__leave="_event: mouseleave; material.color: #AA0000"
+    ></a-box>
+```
+
+##### `_target` property
+
+Which can help us to change a property of another entity:
+
+![s5-c19-3.png](renders%2Fs5-c19-3.png)
+
+```html
+    <a-box id="green"
+           color="#00AA00"
+           position="-2 3 -7"
+           event-set__click="_event: click; material.color: #00AA00"
+></a-box>
+...
+    <a-box id="left-red"
+           color="#AA0000"
+           position="-2 0 -7"
+           event-set__enter="_event: mouseenter; material.color: #FF0000"
+           event-set__leave="_event: mouseleave; material.color: #AA0000"
+           event-set__tarcol="_event: click; _target: #green; material.color: #00AAFF"
+    ></a-box>
+```
+
+![s5-c19-4.png](renders%2Fs5-c19-4.png)
+

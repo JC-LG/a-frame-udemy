@@ -1,4 +1,6 @@
 import 'aframe';
+import 'aframe-event-set-component';
+
 import './style.css';
 
 AFRAME.registerComponent('foo', {
