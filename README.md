@@ -228,3 +228,124 @@ in desktop mode `0 1.6 0`
 ```
 
 ![s4-c14.png](renders%2Fs4-c14.png)
+
+#### 15. Animating Objects
+
+```html
+<a-scene>
+    <a-assets>
+        <img id="floor" src="/images/s4-c13/floor-1024.jpg" />
+    </a-assets>
+
+    <a-plane src="#floor" shader="flat" rotation="-90 0 0" scale="5 5 1"></a-plane>
+
+    <a-entity position="0 0 8">
+        <a-camera></a-camera>
+    </a-entity>
+
+    <a-box color="#AA0000"
+           position="0 4 0"
+           animation="property: rotation;
+                      to: 0 360 0;
+                      loop: true;
+                      dur: 5000;
+                      easing: linear;
+           "
+    >
+    </a-box>
+
+    <a-entity position="0 4 0"
+              animation="property: rotation;
+                      to: 0 -360 0;
+                      loop: true;
+                      dur: 5000;
+                      easing: linear;
+           "
+    >
+        <a-box color="#00AA00"
+               position="2 0 0"
+               animation="property: rotation;
+                      to: 0 -360 0;
+                      loop: true;
+                      dur: 5000;
+                      easing: linear;
+           "
+        ></a-box>
+    </a-entity>
+    
+</a-scene>
+```
+
+![s4-c15-1.png](renders%2Fs4-c15-1.png)
+
+
+[`animation`](https://aframe.io/docs/1.6.0/components/animation.html)
+
+```html
+    <a-box color="#FFAA00"
+           position="0 0.5 0"
+           animation="property: position;
+                      from: -2 0.5 -2;
+                      to: -2 0.5 2;
+                      loop: true;
+                      dir: alternate;
+                      dur: 3000;
+                      easing: linear;
+           "
+    >
+    </a-box>
+```
+
+![s4-c15-2.png](renders%2Fs4-c15-2.png)
+
+
+````html
+    <!--  Scaling Box  -->
+    <a-box color="#FFAA00"
+           position="2 0.5 0"
+           animation="property: scale;
+                      to: 0.2 1 5;
+                      loop: true;
+                      dir: alternate;
+                      dur: 3000;
+                      easing: easeOutElastic;
+           "
+    >
+````
+
+![s4-c15-3.png](renders%2Fs4-c15-3.png)
+
+```html
+    <a-sphere color="#0000AA"
+              radius="0.5"
+              position="0 2.25 0"
+              animation="property: material.color;
+                         from: #00AAFF;
+                         to: #0000AA;
+                         loop: true;
+                         dir: alternate;
+                         dur: 1000;
+                         easing: linear;
+           "
+    >
+    </a-sphere>
+```
+
+![s4-c15-4.png](renders%2Fs4-c15-4.png)
+
+```html
+    <a-cone color="#484848"
+            position="0 0.5 0"
+            animation="property: material.opacity;
+                       from: 1;
+                       to: 0;
+                       loop: true;
+                       dir: alternate;
+                       dur: 1500;
+                       easing: linear;
+           "
+    ></a-cone>
+```
+
+![s4-c15-5.png](renders%2Fs4-c15-5.png)
+
