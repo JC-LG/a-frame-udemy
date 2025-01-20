@@ -476,3 +476,41 @@ Which can help us to change a property of another entity:
 
 ![s5-c19-4.png](renders%2Fs5-c19-4.png)
 
+
+#### 20. Gaze-based Interactions
+
+Also known as [gaze-based cursor](https://aframe.io/docs/1.6.0/components/cursor.html#fuse-based-cursor). 
+If we set the cursor to be fuse-based, the cursor will trigger a click if the user gazes at an entity for a set amount of time. 
+Imagine a laser strapped to the user’s head, and the laser extends out into the scene. 
+If the user stares at an entity long enough (i.e., the fuseTimeout `1500` default value), then the cursor will trigger a click.
+
+```html
+<a-entity cursor="fuse: true; fuseTimeout: 1500;"
+```
+
+Great to test without using a device, since the gaze based interaction events will be triggered on Desktop mode. 
+Improving the cursor to provide better user feedback:
+
+```html
+        <a-entity cursor="fuse: true; fuseTimeout: 1500;"
+                  position="0 0 -1"
+                  geometry="primitive: sphere;
+                            radius: 0.005;"
+                  material="color: #000000;
+                            shader: flat;
+                            opacity: 0.5;"
+                  animation__enter="property: scale;
+                                    to: 3 3 3;
+                                    dur: 1000;
+                                    easing: linear;
+                                    startEvents: mouseenter"
+                  event-set__reset="_event: animationcomplete__enter; scale: 1 1 1"
+                  animation__leave="property: scale;
+                                    to: 1 1 1;
+                                    dur: 1000;
+                                    easing: linear;
+                                    startEvents: mouseleave"
+        >
+        </a-entity>
+```
+ 

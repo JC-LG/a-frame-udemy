@@ -33,14 +33,26 @@
 
     <!--  Cursor Component  -->
     <a-camera>
-        <a-entity cursor
+        <a-entity cursor="fuse: true; fuseTimeout: 1500;"
                   position="0 0 -1"
                   geometry="primitive: sphere;
                             radius: 0.005;"
                   material="color: #000000;
                             shader: flat;
                             opacity: 0.5;"
-        ></a-entity>
+                  animation__enter="property: scale;
+                                    to: 3 3 3;
+                                    dur: 1000;
+                                    easing: linear;
+                                    startEvents: mouseenter"
+                  event-set__reset="_event: animationcomplete__enter; scale: 1 1 1"
+                  animation__leave="property: scale;
+                                    to: 1 1 1;
+                                    dur: 1000;
+                                    easing: linear;
+                                    startEvents: mouseleave"
+        >
+        </a-entity>
     </a-camera>
 
     <a-box id="green"
