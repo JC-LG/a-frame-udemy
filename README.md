@@ -380,4 +380,33 @@ and after modifying the entity, you can copy and paste the modified values:
 ### Section 5: Interacting with the Objects
 #### 18. Cursor primitive component
 
+To create basic interactivity we can use the cursor primitive:
 
+```html
+    <a-camera>
+        <a-cursor></a-cursor>
+    </a-camera>
+```
+
+![s5-c18-1.png](renders%2Fs5-c18-1.png)
+
+Custom cursor:
+
+```html
+    <a-camera>
+        <a-entity cursor
+                  position="0 0 -1"
+                  geometry="primitive: sphere;
+                            radius: 0.005;"
+                  material="color: #000000;
+                            shader: flat;
+                            opacity: 0.5;"
+        ></a-entity>
+    </a-camera>
+
+    <a-box color="#AA0000" position="-2 0 -7"></a-box>
+    <a-box color="#AA0000" position=" 0 0 -7"></a-box>
+    <a-box color="#AA0000" position=" 2 0 -7"></a-box>
+```
+
+![s5-c18-2.png](renders%2Fs5-c18-2.png)

@@ -11,93 +11,40 @@
 <a-scene>
     <!--  Asset Management System: Preload and Cache  -->
     <a-assets>
-        <img id="floor" src="/images/s4-c13/floor-1024.jpg" />
     </a-assets>
 
-    <a-plane src="#floor" shader="flat" rotation="-90 0 0" scale="5 5 1"></a-plane>
+<!--    <a-entity camera look-controls>-->
+<!--        <a-entity cursor="fuse: true; fuseTimeout: 500"-->
+<!--                  position="0 0 -1"-->
+<!--                  geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"-->
+<!--                  material="color: black; shader: flat">-->
+<!--        </a-entity>-->
+<!--    </a-entity>-->
+<!--    <a-box cursor-listener color="#AA0000" position="-2 0 -7"></a-box>-->
+<!--    <a-box cursor-listener color="#AA0000" position=" 0 0 -7"></a-box>-->
+<!--    <a-box cursor-listener color="#AA0000" position=" 2 0 -7"></a-box>-->
 
-    <!--  Camera  -->
-    <a-entity position="0 0 8">
-        <a-camera></a-camera>
-    </a-entity>
+    <!--  Cursor Primitive  -->
+<!--    <a-camera>-->
+<!--        <a-cursor></a-cursor>-->
+<!--    </a-camera>-->
 
-    <!--  Rotating Box  -->
-    <a-box color="#AA0000"
-           position="0 4 0"
-           animation="property: rotation;
-                      to: 0 360 0;
-                      loop: true;
-                      dur: 5000;
-                      easing: linear;
-           "
-    >
-    </a-box>
+    <!--  Cursor Component  -->
+    <a-camera>
+        <a-entity cursor
+                  position="0 0 -1"
+                  geometry="primitive: sphere;
+                            radius: 0.005;"
+                  material="color: #000000;
+                            shader: flat;
+                            opacity: 0.5;"
+        ></a-entity>
+    </a-camera>
 
-    <a-entity position="0 4 0"
-              animation="property: rotation;
-                      to: 0 -360 0;
-                      loop: true;
-                      dur: 5000;
-                      easing: linear;
-           "
-    >
-        <a-box color="#00AA00"
-               position="2 0 0"
-               animation="property: rotation;
-                      to: 0 -360 0;
-                      loop: true;
-                      dur: 5000;
-                      easing: linear;
-           "
-        ></a-box>
-    </a-entity>
+    <a-box color="#AA0000" position="-2 0 -7"></a-box>
+    <a-box color="#AA0000" position=" 0 0 -7"></a-box>
+    <a-box color="#AA0000" position=" 2 0 -7"></a-box>
 
-    <a-box color="#FFAA00"
-           position="0 0.5 0"
-           animation="property: position;
-                      from: -2 0.5 -2;
-                      to: -2 0.5 2;
-                      loop: true;
-                      dir: alternate;
-                      dur: 3000;
-                      easing: linear;
-           "
-    >
-    </a-box>
-
-    <!--  Scaling Box  -->
-    <a-box color="#FFAA00"
-           position="2 0.5 0"
-           animation="property: scale;
-                      to: 0.2 1 5;
-                      loop: true;
-                      dir: alternate;
-                      dur: 3000;
-                      easing: easeOutElastic;
-           "
-    >
-    </a-box>
-
-    <a-sphere color="#0000AA"
-              radius="0.5"
-              position="-0.16207 1.28463 0"
-              animation="dir: alternate; easing: linear; from: #00AAFF; loop: true; property: material.color; to: #0000AA"
-              material="color: rgba(0,139,239,1)"
-              scale="1.14681 2.17624 -1.77865"
-    ></a-sphere>
-
-
-    <a-cone color="#484848"
-            position="0 0.5 0"
-            animation="property: material.opacity;
-                       from: 1;
-                       to: 0;
-                       loop: true;
-                       dir: alternate;
-                       dur: 1500;
-                       easing: linear;
-           "
-    ></a-cone>
 </a-scene>
 <script type="module" src="/src/main.js"></script>
 
