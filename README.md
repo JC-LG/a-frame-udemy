@@ -205,3 +205,26 @@ in desktop mode `0 1.6 0`
 
 ![s4-c13-4.png](renders%2Fs4-c13-4.png)
 
+#### 14. Loading and Displaying 3D Models
+
+```html
+<a-scene>
+    <a-assets>
+        <img id="sky" src="/images/s4-c12/clear-sunny-sky.jpg" />
+        <a-asset-item id="castle" src="/models/gltf/castle/scene.gltf"></a-asset-item>
+        <a-asset-item id="catapult" src="/models/gltf/catapult/scene.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-sky src="#sky"></a-sky>
+
+    <a-camera position="0 1.6 7"></a-camera>
+
+    <a-entity gltf-model="#castle" rotation="-90 0 0" position="0 7 0">
+    </a-entity>
+
+    <a-entity gltf-model="#catapult" rotation="4 0 0" position="0 1.8 5" scale=" 0.5 0.5 0.5">
+    </a-entity>
+</a-scene>
+```
+
+![s4-c14.png](renders%2Fs4-c14.png)

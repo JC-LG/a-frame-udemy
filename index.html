@@ -9,47 +9,22 @@
 </head>
 <body>
 <a-scene>
-
     <!--  Asset Management System: Preload and Cache  -->
     <a-assets>
-        <img id="floor" src="/images/s4-c13/floor-1024.jpg" />
-        <img id="height" src="/images/s4-c13/average-height.png" />
+        <img id="sky" src="/images/s4-c12/clear-sunny-sky.jpg" />
+        <a-asset-item id="castle" src="/models/gltf/castle/scene.gltf"></a-asset-item>
+        <a-asset-item id="catapult" src="/models/gltf/catapult/scene.gltf"></a-asset-item>
     </a-assets>
 
-    <!--  Ground  -->
-    <a-plane src="#floor"
-             shader="flat"
-             rotation="-90 0 0"
-             scale="5 5 1"
-    ></a-plane>
-
-    <!--  Cylinder  -->
-    <a-cylinder color="#AA0000"
-                radius="0.5"
-                height="2"
-                position="-2 1 0"
-    ></a-cylinder>
-
-    <!--  Box  -->
-    <a-box color="#00AA00"
-           foo=""
-           height="2"
-           depth="4"
-           position="2 1 0"
-    ></a-box>
-
-    <!--  Average Height: Human Eye Level  -->
-    <a-image src="#height" scale="2 2 1" position="0 1 0"></a-image>
+    <a-sky src="#sky"></a-sky>
 
     <!--  Camera  -->
-    <!--  VR Mode: Origin at 0 0   0  -->
-    <!--  Desktop: Origin at 0 1.6 0  -->
-    <a-camera position="0 1.6 0">
-    </a-camera>
+    <a-camera position="0 1.6 7"></a-camera>
 
+    <a-entity gltf-model="#castle" rotation="-90 0 0" position="0 7 0">
+    </a-entity>
 
-    <a-entity id="rig" position="0 2 7" rotation="-25 0 0">
-        <a-camera id="camera"></a-camera>
+    <a-entity gltf-model="#catapult" rotation="4 0 0" position="0 1.8 5" scale=" 0.5 0.5 0.5">
     </a-entity>
 
 </a-scene>
