@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/svg+xml" href="./vite.svg"/>
+    <!--    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>-->
+    <!--    <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>-->
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>A-Frame</title>
+  <script type="module" crossorigin src="./assets/index-BBn-8eO3.js"></script>
+</head>
+<body>
+<a-scene>
+    <!--  Asset Management System: Preload and Cache  -->
+    <a-assets>
+    </a-assets>
+
+<!--    <a-entity camera look-controls>-->
+<!--        <a-entity cursor="fuse: true; fuseTimeout: 500"-->
+<!--                  position="0 0 -1"-->
+<!--                  geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"-->
+<!--                  material="color: black; shader: flat">-->
+<!--        </a-entity>-->
+<!--    </a-entity>-->
+<!--    <a-box cursor-listener color="#AA0000" position="-2 0 -7"></a-box>-->
+<!--    <a-box cursor-listener color="#AA0000" position=" 0 0 -7"></a-box>-->
+<!--    <a-box cursor-listener color="#AA0000" position=" 2 0 -7"></a-box>-->
+
+    <!--  Cursor Primitive  -->
+<!--    <a-camera>-->
+<!--        <a-cursor></a-cursor>-->
+<!--    </a-camera>-->
+
+    <!--  Cursor Component  -->
+    <a-camera>
+        <a-entity cursor
+                  position="0 0 -1"
+                  geometry="primitive: sphere;
+                            radius: 0.005;"
+                  material="color: #000000;
+                            shader: flat;
+                            opacity: 0.5;"
+        ></a-entity>
+    </a-camera>
+
+    <a-box id="green"
+           color="#00AA00"
+           position="-2 3 -7"
+           event-set__click="_event: click; material.color: #00AA00"
+    ></a-box>
+    <a-box id="blue"
+           color="#0000AA"
+           position=" 0 3 -7"
+           visible="false"
+           event-set__resvis="_event: click; visible: false;"
+    ></a-box>
+    <a-box id="yellow"
+           color="#FFAA00"
+           position="2 3 -7"
+           event-set__respos="_event: click; position: 2 3 -7"
+    ></a-box>
+
+
+    <a-box id="left-red"
+           color="#AA0000"
+           position="-2 0 -7"
+           event-set__enter="_event: mouseenter; material.color: #FF0000"
+           event-set__leave="_event: mouseleave; material.color: #AA0000"
+           event-set__tarcol="_event: click; _target: #green; material.color: #00AAFF"
+    ></a-box>
+    <a-box id="middle-red"
+           color="#AA0000"
+           position=" 0 0 -7"
+           event-set__tarvis="_event: click; _target:#blue; visible: true;"
+    ></a-box>
+    <a-box id="right-red"
+           color="#AA0000"
+           position=" 2 0 -7"
+           event-set__tarmove="_event: click; _target: #yellow; position: 2 5 -7"
+    ></a-box>
+
+</a-scene>
+
+</body>
+</html>

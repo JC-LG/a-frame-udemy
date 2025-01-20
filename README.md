@@ -476,3 +476,5 @@ Which can help us to change a property of another entity:
 
 ![s5-c19-4.png](renders%2Fs5-c19-4.png)
 
+
+#### 20. Gaze-based Interactions
