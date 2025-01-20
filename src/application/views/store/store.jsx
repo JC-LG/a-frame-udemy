@@ -4,7 +4,7 @@ const Store = () => {
     return (
         <>
             <a-entity scale="1 1 1"
-                      position="3 0 -4.5"
+                      position="5 0 3"
                       rotation="0 -17 0"
                       // gltf-model="#apple-store"
                       gltf-model="#apple-store-legacy"
@@ -17,7 +17,7 @@ const Store = () => {
                      repeat="20 20"
                      height="20"
                      width="21"
-                     position="-3.5 .1 -14"
+                     position="-1.5 .01 -8"
                      rotation="-90 -17 0"
             />
             <a-plane src="#grass"
