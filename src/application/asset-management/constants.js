@@ -2,6 +2,10 @@ export const IMAGES = [
     {
         id: 'sky',
         src: '/images/blue-sky.jpg'
+    },
+    {
+        id: 'yosemite',
+        src: '/images/yosemite.jpg'
     }
 ];
 

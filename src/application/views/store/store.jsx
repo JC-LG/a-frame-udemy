@@ -31,10 +31,10 @@ const Store = () => {
                      rotation="-90 0 0"
                      position="0 0 -1"
             />
-            <a-sky src="#sky"
-                   radius="350"
-                   position="0 100 0"
-                   rotation="0 0 -60"
+            <a-sky src="#yosemite"
+                   radius="1000"
+                   position="0 900 0"
+                   rotation="0 -60 0"
             />
         </>
     )

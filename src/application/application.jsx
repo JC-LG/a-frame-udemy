@@ -8,7 +8,8 @@ const Application = () => {
 
     return (
         <>
-            <Store />
+            <a-camera position="0 1.6 -3.2"></a-camera>
+            <Store/>
 
             {/*<ProductExplorer modelId="apple-pencil-pro"*/}
             {/*                 scale={{x: 4, y: 4, z: 4}}*/}
