@@ -349,3 +349,35 @@ in desktop mode `0 1.6 0`
 
 ![s4-c15-5.png](renders%2Fs4-c15-5.png)
 
+
+#### 16. Adding light and shadows
+...WIP
+
+
+#### 17. `A-Frame` Inspector
+[docs](https://aframe.io/docs/1.6.0/introduction/visual-inspector-and-dev-tools.html)
+
+Mac, open inspector with:
+`ctrl` + `option` + `i`
+
+![s4-c17-1.png](renders%2Fs4-c17-1.png)
+
+and after modifying the entity, you can copy and paste the modified values: 
+
+```html
+<a-sphere color="#0000AA" 
+          radius="0.5" 
+          position="-0.16207 1.28463 0" 
+          animation="dir: alternate; easing: linear; from: #00AAFF; loop: true; property: material.color; to: #0000AA" 
+          material="color: rgba(0,139,239,1)" 
+          scale="1.14681 2.17624 -1.77865"
+></a-sphere>
+```
+
+![s4-c17-2.png](renders%2Fs4-c17-2.png)
+
+
+### Section 5: Interacting with the Objects
+#### 18. Cursor primitive component
+
+
