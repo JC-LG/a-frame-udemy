@@ -514,6 +514,37 @@ Improving the cursor to provide better user feedback:
         </a-entity>
 ```
 
+#### 21. Selective Intersections
+In order to improve performance, we will use selective intersections to make sure the ray-caster component
+doesn't test against all entities.
+
+In the cursor:
+```html
+        <a-entity cursor="fuse: true; fuseTimeout: 1500;"
+        ...
+                  raycaster="objects: .clickable"
+        >
+```
+
+In the expected targets:
+
+```html
+    <a-box id="left-red"
+           ...
+           class="clickable"
+           event-set__clearclass="_event: click; class: not-clickable"
+           event-set__tarclass="_event: click; _target:#green; class: clickable"
+    ></a-box>
+...
+<a-box id="green"
+       ...
+       event-set__click="_event: click; material.color: #00AA00"
+       event-set__clearclass="_event: click; class: not-clickable"
+       event-set__tarclass="_event: click; _target:#left-red; class: clickable"
+></a-box>
+```
+
+
 #### 22. Controller-based interactions
 
 `3DoF` stands for "three degrees of freedom" and `6DoF` stands for "six degrees of freedom". 
