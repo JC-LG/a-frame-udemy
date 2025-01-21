@@ -514,7 +514,7 @@ Improving the cursor to provide better user feedback:
         </a-entity>
 ```
 
-#### 21. Controller-based interactions
+#### 22. Controller-based interactions
 
 `3DoF` stands for "three degrees of freedom" and `6DoF` stands for "six degrees of freedom". 
 In virtual reality (VR), these terms describe the number of ways a user can move around in a virtual space. 6DoF is generally more immersive than 3DoF, but which is better depends on the intended use.
