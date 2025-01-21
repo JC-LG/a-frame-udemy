@@ -513,4 +513,57 @@ Improving the cursor to provide better user feedback:
         >
         </a-entity>
 ```
- 
+
+#### 21. Controller-based interactions
+
+`3DoF` stands for "three degrees of freedom" and `6DoF` stands for "six degrees of freedom". 
+In virtual reality (VR), these terms describe the number of ways a user can move around in a virtual space. 6DoF is generally more immersive than 3DoF, but which is better depends on the intended use.
+
+![3-vs-6-dof.png](renders%2F3-vs-6-dof.png)
+
+##### 3DoF
+- Tracks head movements along three rotational axes: roll, pitch, and yaw
+- Allows users to look around, but not move around in the virtual space
+- Can be immersive for watching films or riding a vehicle
+- Can cause motion sickness because the brain is confused by the lack of full movement
+- Can be better suited for soft skills training
+
+##### 6DoF
+- Tracks both rotational and translational motion
+- Allows users to move around in the virtual space like they would in real life
+- Can be more immersive for technical skills training that requires hands-on practice
+- Requires infrared or optical tracking systems, which can increase the price of the headset
+
+##### [`look-controls`](https://aframe.io/docs/1.6.0/components/look-controls.html#main)
+
+The look-controls component:
+- Rotates the entity when we rotate a VR head-mounted display (HMD).
+- Rotates the entity when we move the mouse.
+- Rotates the entity when we touch-drag the touchscreen.
+
+
+##### [`laser-controls`](https://aframe.io/docs/1.6.0/components/laser-controls.html#main)
+
+The laser-controls component provides tracked controls with a laser or ray cursor shooting 
+out to be used for input and interactions. DoF stands for degrees of freedom. Because they 
+only require rotation and some form of input, laser-based interactions scale well across 0 DoF 
+(gaze-based, Cardboard), and 6 DoF (Vive, Oculus Touch). If desired, we can get a consistent 
+form of interaction that works across all VR platforms with a single line of HTML.
+
+```html
+        <a-entity id="cam-rig">
+            <!-- CAMERA -->
+            <a-entity camera position="0 1.6 0" look-controls></a-entity>
+            <!-- A-FRAME's laser-controls component for VR headsets (Quest, Quest 2, Vive Pro, etc.) -->
+            <!-- Right Controller  -->
+            <a-entity laser-controls="hand: right" raycaster="objects: .UIbutton; lineColor: #FF0000"></a-entity>
+            <!-- Left Controller  -->
+            <a-entity laser-controls="hand: left" raycaster="objects: .UIbutton; lineColor: #FF0000"></a-entity>
+        </a-entity>
+...
+    <a-box color="#212121" position="-2.25 0 -9" scale="2 1 0.1" class="UIbutton"
+           event-set__enter="_event: mouseenter; color: #AA0000"
+           event-set__leave="_event: mouseleave; color: #212121"
+           event-set__tarcol="_event: click; _target: #screen; color: #AA0000">
+    </a-box>
+```
