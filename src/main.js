@@ -1,5 +1,6 @@
 import 'aframe';
 import 'aframe-event-set-component';
+import 'super-hands';
 
 import './style.css';
 
@@ -30,11 +31,11 @@ import './style.css';
  * this might not be required anymore
  * I see the toggle state working without it in 1.6.0
  */
-AFRAME.registerComponent('refresh-obj', {
-    init: function () {
-        this.el.addEventListener('click', function () {
-            const myGBcursor = document.querySelector('#myGBcursor');
-            myGBcursor.components.raycaster.refreshObjects();
-        });
-    }
-});
+// AFRAME.registerComponent('refresh-obj', {
+//     init: function () {
+//         this.el.addEventListener('click', function () {
+//             const myGBcursor = document.querySelector('#myGBcursor');
+//             myGBcursor.components.raycaster.refreshObjects();
+//         });
+//     }
+// });

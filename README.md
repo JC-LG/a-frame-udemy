@@ -598,3 +598,22 @@ form of interaction that works across all VR platforms with a single line of HTM
            event-set__tarcol="_event: click; _target: #screen; color: #AA0000">
     </a-box>
 ```
+![s5-c22.png](renders%2Fs5-c22.png)
+
+
+#### 23. Gesture Interactions
+
+##### [`super-hands`](https://www.npmjs.com/package/super-hands)
+
+The goal of super-hands is to make it easy to handle user input in Web VR by providing a high-level API that is consistent 
+across all devices. Instead of dealing directly with controller button events, raycasters, and collision detection 
+components, you setup your scene and components instead to respond to 'gestures' like hovering and grabbing.
+
+The currently implemented gestures are:
+
+- **Hover**: Holding a controller in the collision space of an entity or pointing at an entity with a cursor or laser pointer
+- **Grab**: Pressing a button while hovering an entity, potentially also moving it
+- **Stretch**: Grabbing an entity with two hands and resizing
+- **Drag-drop**: Activating one entity and then gesturing to another entity to interact with it
+
+![s5-c23.png](renders%2Fs5-c23.png)
