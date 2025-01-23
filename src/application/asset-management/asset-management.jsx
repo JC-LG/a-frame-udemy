@@ -14,8 +14,15 @@ const AssetManagement = () => {
                 <a-asset-item key={id} id={id} src={src}/>
             ))}
             {ALL_IMAGES.map(({id, src}) => (
-                <img key={id} id={id} src={src} />
+                <img key={id} id={id} src={src}/>
             ))}
+            <a-asset-item id="right-gltf"
+                          src="https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/skeleton-right-hand-webxr/model.gltf"></a-asset-item>
+            <a-asset-item id="left-gltf"
+                          src="https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/skeleton-left-hand-webxr/model.gltf"></a-asset-item>
+            <a-mixin id="blink"
+                     blink-controls="rotateOnTeleport:false;cameraRig: #cameraRig; teleportOrigin: #head; collisionEntities:.navmesh;"></a-mixin>
+
         </a-assets>
     )
 };

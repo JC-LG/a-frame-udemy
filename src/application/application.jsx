@@ -1,4 +1,8 @@
 import 'aframe';
+import 'aframe-extras';
+import 'aframe-blink-controls';
+// import 'handy-work';
+
 import React from 'react';
 
 import Store from './views/store/store';
@@ -8,7 +12,42 @@ const Application = () => {
 
     return (
         <>
-            <a-camera position="0 1.6 0"></a-camera>
+            {/*<a-camera position="0 1.6 0"></a-camera>*/}
+            <a-entity
+                id="cameraRig"
+                simple-navmesh-constraint="navmesh:.navmesh;fall:0.5;height:0;exclude:.navmesh-hole;"
+                movement-controls="speed:0.15;camera:#head;"
+                position="-1 0 1" rotation="0 45 0" origin-on-ar-start
+            >
+                <a-entity id="head" camera="near:0.01;" look-controls="pointerLockEnabled: false" position="0 1.65 0" />
+
+                <a-entity handy-controls="right:#right-gltf;materialOverride:right;"
+                          material="color:gold;metalness:1;roughness:0;">
+                    <a-entity data-right="index-finger-tip" mixin="blink"
+                              blink-controls="snapTurn:false;startEvents:pose_point_fuseShort;endEvents:pose_point_fuseLong;cancelEvents:pose_cancel_point;"></a-entity>
+                    <a-entity data-left="index-finger-tip" mixin="blink"
+                              blink-controls="snapTurn:false;startEvents:pose_point_fuseShort;endEvents:pose_point_fuseLong;cancelEvents:pose_cancel_point;"></a-entity>
+
+                    <a-entity data-right="ray" mixin="blink" cursor=""
+                              raycaster="objects:[html];far:0.3;showLine:false;lineColor:black;">
+                        <a-entity position="0 0 -0.22" visible="false" className="pose-label"
+                                  text="value: Hello World; align: center;"></a-entity>
+                    </a-entity>
+                    <a-entity data-left="ray" mixin="blink" cursor=""
+                              raycaster="objects:[html];far:0.3;showLine:false;lineColor:black;">
+                        <a-entity position="0 0 -0.22" visible="false" className="pose-label"
+                                  text="value: Hello World; align: center;"></a-entity>
+                    </a-entity>
+
+                    <a-entity id="left-no-magnet" data-left="grip" data-no-magnet>
+                        <a-entity html="html:#my-interface;cursor:#cursor" position="-0.142 -0.0166 -0.02928"
+                                  rotation="-80 90 0" scale="0.7 0.7 0.7"></a-entity>
+                    </a-entity>
+                    <a-entity id="right-no-magnet" data-right="grip" data-no-magnet></a-entity>
+                </a-entity>
+            </a-entity>
+
+
             <Store/>
 
             {/*<ProductExplorer modelId="apple-pencil-pro"*/}
