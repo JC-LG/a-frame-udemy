@@ -1,6 +1,6 @@
 import 'aframe';
-import 'aframe-event-set-component';
-import 'super-hands';
+// import 'aframe-event-set-component';
+// import 'super-hands';
 
 import './style.css';
 
