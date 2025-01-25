@@ -617,3 +617,36 @@ The currently implemented gestures are:
 - **Drag-drop**: Activating one entity and then gesturing to another entity to interact with it
 
 ![s5-c23.png](renders%2Fs5-c23.png)
+
+#### Apple Vision Pro
+You can point with your eyes and select with a pinch gesture.
+- [WWDC24: Build immersive web experiences with WebXR | Apple](https://www.youtube.com/watch?v=C3XDHjam-eI&t=115s)
+- [WWDC24: Optimize for the spatial web | Apple](https://www.youtube.com/watch?v=5tjPBF2qoY4)
+
+```html
+<a-scene cursor="rayOrigin:xrselect;" raycaster="objects: [mixin=mouseover]">
+
+    <a-assets>
+        <a-mixin id="mouseover"
+            animation__c1="property:color; to:#ff44ff; type:color; startEvents:mouseenter; dur:100;"
+            animation__c2="property:color; type:color; startEvents:mouseleave; dur:100;"
+            animation__click="property:object3D.position.y; to: 2; startEvents:click; dur:200;"
+        ></a-mixin>
+    </a-assets>
+
+...
+    <a-box id="red"
+           color="#AA0000"
+           position="-1.5 0 -7"
+           mixin="mouseover"
+           animation__c1="from:#FF0000"
+           animation__c2="to:#FF0000"
+    ></a-box>
+```
+
+[s5-c23-gesture-interactions.MP4](renders/s5-c23-gesture-interactions.MP4)
+
+### Section 6: Enhancing The Virtual Environment
+#### 24. Physics and collisions
+
+
