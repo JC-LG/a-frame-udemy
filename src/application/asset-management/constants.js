@@ -39,8 +39,12 @@ export const MODELS = [
     },
     {
         id: 'apple-store-legacy',
-        src: './models/apple-immersive-store-legacy.glb'
+        src: './models/apple-store2.glb'
     },
+    // {
+    //     id: 'apple-store-legacy',
+    //     src: './models/apple-immersive-store-legacy.glb'
+    // },
     {
         id: 'apple-pencil-pro',
         src: './models/apple-pencil-pro.glb'

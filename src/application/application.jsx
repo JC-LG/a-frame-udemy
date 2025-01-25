@@ -1,4 +1,4 @@
-import 'aframe';
+// import 'aframe';
 import 'aframe-extras';
 import 'aframe-blink-controls';
 // import 'handy-work';

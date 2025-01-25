@@ -4,44 +4,15 @@
         <link rel="icon" href="./favicon.ico" />
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src="https://cdn.jsdelivr.net/npm/aframe@1.6.0/dist/aframe-master.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/handy-work@3.1.11/build/handy-controls.min.js"></script>
 
         <title>AOIS</title>
-      <script type="module" crossorigin src="./assets/index-CuTvPvQL.js"></script>
+      <script type="module" crossorigin src="./assets/index-DWbQLKJ3.js"></script>
       <link rel="stylesheet" crossorigin href="./assets/index-Da3jwKTX.css">
-        <script defer src="https://cdn.jsdelivr.net/npm/handy-work@3.1.11/build/handy-controls.min.js"></script>
-
     </head>
     <body>
         <div id="app"></div>
-
-        <script>
-            setTimeout(() => {
-                let movementType = 'teleport';
-                function toggleThumbstick(detail) {
-                    const rayPointers = ['[data-right="ray"]', '[data-left="ray"]'].map(s => document.querySelector(s));
-                    const type = detail.value;
-                    movementType = type;
-                    if (type === 'move') {
-                        cameraRig.setAttribute('movement-controls', 'enabled', true);
-                        for (const p of rayPointers) p.removeAttribute('mixin');
-                    }
-                    if (type === 'teleport') {
-                        cameraRig.setAttribute('movement-controls', 'enabled', false);
-                        for (const p of rayPointers) p.setAttribute('mixin', 'blink');
-                    }
-                }
-                // If the user is teleporting disable movement-controls in XR
-                const sceneEl = document.querySelector("a-scene");
-                sceneEl.addEventListener("enter-vr", function() {
-                    if (movementType === 'teleport') {
-                        cameraRig.setAttribute('movement-controls', 'enabled', false);
-                    }
-                });
-                sceneEl.addEventListener("exit-vr", function() {
-                    cameraRig.setAttribute('movement-controls', 'enabled', true);
-                });
-            }, 15000);
-
-        </script>
     </body>
 </html>
