@@ -24,7 +24,8 @@ const ProductExplorer = ({ modelId, position, rotation, scale }) => {
 
     return (
         <>
-            <a-entity scale={productScale}
+            <a-entity id={modelId}
+                      scale={productScale}
                       position={productPosition}
                       rotation={productRotation}
                       gltf-model={gltfModel}

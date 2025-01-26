@@ -45,7 +45,7 @@ const ApplicationContextProvider = ({ children }) => {
                 )}
             </a-scene>
         </ApplicationContext.Provider>
-);
+    );
 };
 
 const useApplicationContext = () => useContext(ApplicationContext);
