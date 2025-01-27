@@ -26,7 +26,7 @@ const Teleport = ({ children }) => {
 
     useLayoutEffect(() => {
         injectScript({
-            src: HANDY_WORK_CDN_URL,
+            src: `${HANDY_WORK_CDN_URL}?pulled=${Date.now()}`,
             attributes: { defer: true }
         })
     }, []);
