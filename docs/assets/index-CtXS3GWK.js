@@ -60032,11 +60032,11 @@ function ZI() {
 
 var $I = ZI();
 const eR = dw($I), M0 = {CAMERA_RIG: "cameraRig", HEAD: "head"}, gm = {
-        SKY: {ID: "sky", SRC: "../images/blue-sky.jpg"},
+        SKY: {ID: "sky", SRC: "./images/blue-sky.jpg"},
         YOSEMITE: {ID: "yosemite", SRC: "./images/yosemite.jpg"},
-        SPACE: {ID: "space", SRC: "../images/space.jpg"},
-        WAVE: {ID: "wave", SRC: "../images/bg-1.png"},
-        ARCH: {ID: "arch", SRC: "../images/bg-3.png"}
+        SPACE: {ID: "space", SRC: "./images/space.jpg"},
+        WAVE: {ID: "wave", SRC: "./images/bg-1.png"},
+        ARCH: {ID: "arch", SRC: "./images/bg-3.png"}
     }, tR = Object.keys(gm).map(A => gm[A]), S0 = {
         BRICK: {ID: "brick", SRC: "./textures/TCom_Wall_Stone3_2x2_1K_albedo.jpeg"},
         GRASS: {ID: "grass", SRC: "./textures/TCom_Ground_Grass03_header.jpg"}
