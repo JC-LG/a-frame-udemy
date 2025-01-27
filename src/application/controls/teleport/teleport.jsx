@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from 'react';
 
 import { SCENE_ELEMENTS } from '../../constants';
-import { injectScript } from '../../utils/dom';
+// import { injectScript } from '../../utils/dom';
 
 // import {
 //     update as handyWorkUpdate,
@@ -13,7 +13,7 @@ import { injectScript } from '../../utils/dom';
 // loadPose('relax', `${HANDY_WORK_CDN}/poses/relax.handpose`);
 // loadPose('point', `${HANDY_WORK_CDN}/poses/relax.handpose`);
 
-const HANDY_WORK_CDN_URL =  'https://cdn.jsdelivr.net/npm/handy-work@3.1.11/build/handy-controls.min.js';
+// const HANDY_WORK_CDN_URL =  'https://cdn.jsdelivr.net/npm/handy-work@3.1.11/build/handy-controls.min.js';
 
 /**
  * simple-navmesh-constraint {@link https://github.com/AdaRoseCannon/aframe-xr-boilerplate?tab=readme-ov-file#simple-navmesh-constraintjs}
@@ -24,12 +24,12 @@ const HANDY_WORK_CDN_URL =  'https://cdn.jsdelivr.net/npm/handy-work@3.1.11/buil
  */
 const Teleport = ({ children }) => {
 
-    useLayoutEffect(() => {
-        injectScript({
-            src: `${HANDY_WORK_CDN_URL}?pulled=${Date.now()}`,
-            attributes: { defer: true }
-        })
-    }, []);
+    // useLayoutEffect(() => {
+    //     injectScript({
+    //         src: `${HANDY_WORK_CDN_URL}?pulled=${Date.now()}`,
+    //         attributes: { defer: true }
+    //     })
+    // }, []);
 
     return (
         <a-entity
