@@ -1,28 +1,32 @@
+const { PROD} = import.meta.env;
+const ASSET_PREFIX = PROD ? './' : '';
+
 export const SCENE_ELEMENTS = {
     CAMERA_RIG: 'cameraRig',
     HEAD: 'head',
-}
+};
+
 
 export const IMAGE = {
     SKY: {
         ID: 'sky',
-        SRC: '/images/blue-sky.jpg'
+        SRC: `${ASSET_PREFIX}/images/blue-sky.jpg`
     },
     YOSEMITE: {
         ID: 'yosemite',
-        SRC: '/images/yosemite.jpg'
+        SRC: `${ASSET_PREFIX}/images/yosemite.jpg`
     },
     SPACE: {
         ID: 'space',
-        SRC: '/images/space.jpg'
+        SRC: `${ASSET_PREFIX}/images/space.jpg`
     },
     WAVE: {
         ID: 'wave',
-        SRC: '/images/bg-1.png'
+        SRC: `${ASSET_PREFIX}/images/bg-1.png`
     },
     ARCH: {
         ID: 'arch',
-        SRC: '/images/bg-3.png'
+        SRC: `${ASSET_PREFIX}/images/bg-3.png`
     },
 };
 export const IMAGES = Object.keys(IMAGE).map((key) => IMAGE[key]);
@@ -30,11 +34,11 @@ export const IMAGES = Object.keys(IMAGE).map((key) => IMAGE[key]);
 export const TEXTURE = {
     BRICK: {
         ID: 'brick',
-        SRC: '/textures/TCom_Wall_Stone3_2x2_1K_albedo.jpeg'
+        SRC: `${ASSET_PREFIX}/textures/TCom_Wall_Stone3_2x2_1K_albedo.jpeg`
     },
     GRASS: {
         ID: 'grass',
-        SRC: '/textures/TCom_Ground_Grass03_header.jpg'
+        SRC: `${ASSET_PREFIX}/textures/TCom_Ground_Grass03_header.jpg`
     }
 };
 export const TEXTURES = Object.keys(TEXTURE).map((key) => TEXTURE[key]);
@@ -42,11 +46,11 @@ export const TEXTURES = Object.keys(TEXTURE).map((key) => TEXTURE[key]);
 export const NORMAL_MAP = {
     BRICK: {
         ID: 'brick-normal',
-        SRC: '/textures/TCom_Wall_Stone3_2x2_1K_albedo_NormalMap.png'
+        SRC: `${ASSET_PREFIX}/textures/TCom_Wall_Stone3_2x2_1K_albedo_NormalMap.png`
     },
     GRASS: {
         ID: 'grass-normal',
-        SRC: '/textures/TCom_Ground_Grass03_header_NormalMap.png'
+        SRC: `${ASSET_PREFIX}/textures/TCom_Ground_Grass03_header_NormalMap.png`
     }
 }
 export const NORMAL_MAPS = Object.keys(NORMAL_MAP).map((key) => NORMAL_MAP[key]);
@@ -60,52 +64,52 @@ const MODEL_TYPE = {
 export const MODEL = {
     // STORE: {
     //     ID: 'apple-store',
-    //     SRC: './models/apple-immersive-store-legacy.glb'
+    //     SRC: `${ASSET_PREFIX}./models/apple-immersive-store-legacy.glb'
     //     TYPE: MODEL_TYPE.STAGE
     // },
     STORE: {
         ID: 'apple-store',
-        SRC: '/models/apple-store2.glb',
+        SRC: `${ASSET_PREFIX}/models/apple-store2.glb`,
         TYPE: MODEL_TYPE.STAGE
     },
     VISION_PRO: {
         ID: 'apple-vision-pro',
-        SRC: '/models/apple-vision-pro.glb',
+        SRC: `${ASSET_PREFIX}/models/apple-vision-pro.glb`,
         TYPE: MODEL_TYPE.PRODUCT
     },
     PENCIL_PRO: {
         ID: 'apple-pencil-pro',
-        SRC: '/models/apple-pencil-pro.glb',
+        SRC: `${ASSET_PREFIX}/models/apple-pencil-pro.glb`,
         TYPE: MODEL_TYPE.PRODUCT
     },
     WATCH: {
         ID: 'apple-watch',
-        SRC: '/models/apple-watch.glb',
+        SRC: `${ASSET_PREFIX}/models/apple-watch.glb`,
         TYPE: MODEL_TYPE.PRODUCT
     },
     IMAC_GREEN: {
         ID: 'imac-green',
-        SRC: '/models/imac-green.glb',
+        SRC: `${ASSET_PREFIX}/models/imac-green.glb`,
         TYPE: MODEL_TYPE.PRODUCT
     },
     IMAC_YELLOW: {
         ID: 'imac-yellow',
-        SRC: '/models/imac-yellow.glb',
+        SRC: `${ASSET_PREFIX}/models/imac-yellow.glb`,
         TYPE: MODEL_TYPE.PRODUCT
     },
     IPHONE_16_PRO: {
         ID: 'iphone-16-pro',
-        SRC: '/models/iphone-16-pro.glb',
+        SRC: `${ASSET_PREFIX}/models/iphone-16-pro.glb`,
         TYPE: MODEL_TYPE.PRODUCT
     },
     MBP_BLACK: {
         ID: 'macbook-pro-black',
-        SRC: '/models/macbook-pro-black.glb',
+        SRC: `${ASSET_PREFIX}/models/macbook-pro-black.glb`,
         TYPE: MODEL_TYPE.PRODUCT
     },
     MBP_SILVER: {
         ID: 'macbook-pro-silver',
-        SRC: '/models/macbook-pro-silver.glb',
+        SRC: `${ASSET_PREFIX}/models/macbook-pro-silver.glb`,
         TYPE: MODEL_TYPE.PRODUCT
     }
 };

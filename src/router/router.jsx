@@ -33,6 +33,7 @@ const Router = () => {
                 <Route path={ROUTES.STORE.URL} element={<Store />} />
                 <Route path={ROUTES.PRODUCT.URL} element={<Product />} />
                 <Route path={ROUTES.CONFIGURATION.URL} element={<Configuration />} />
+                <Route path="*" element={<Store />} />
             </Routes>
         </BrowserRouter>
     )
