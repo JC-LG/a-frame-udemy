@@ -1,3 +1,8 @@
+export const SCENE_ELEMENTS = {
+    CAMERA_RIG: 'cameraRig',
+    HEAD: 'head',
+}
+
 export const IMAGE = {
     SKY: {
         ID: 'sky',
