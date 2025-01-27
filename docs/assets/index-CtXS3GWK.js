@@ -60045,14 +60045,14 @@ const eR = dw($I), M0 = {CAMERA_RIG: "cameraRig", HEAD: "head"}, gm = {
         GRASS: {ID: "grass-normal", SRC: "./textures/TCom_Ground_Grass03_header_NormalMap.png"}
     }, iR = Object.keys(T0).map(A => T0[A]), Kl = {PRODUCT: "product", STAGE: "stage", ENVIRONMENT: "environment"}, vm = {
         STORE: {ID: "apple-store", SRC: "./models/apple-store2.glb", TYPE: Kl.STAGE},
-        VISION_PRO: {ID: "apple-vision-pro", SRC: "../models/apple-vision-pro.glb", TYPE: Kl.PRODUCT},
-        PENCIL_PRO: {ID: "apple-pencil-pro", SRC: "../models/apple-pencil-pro.glb", TYPE: Kl.PRODUCT},
-        WATCH: {ID: "apple-watch", SRC: "../models/apple-watch.glb", TYPE: Kl.PRODUCT},
-        IMAC_GREEN: {ID: "imac-green", SRC: "../models/imac-green.glb", TYPE: Kl.PRODUCT},
-        IMAC_YELLOW: {ID: "imac-yellow", SRC: "../models/imac-yellow.glb", TYPE: Kl.PRODUCT},
-        IPHONE_16_PRO: {ID: "iphone-16-pro", SRC: "../models/iphone-16-pro.glb", TYPE: Kl.PRODUCT},
-        MBP_BLACK: {ID: "macbook-pro-black", SRC: "../models/macbook-pro-black.glb", TYPE: Kl.PRODUCT},
-        MBP_SILVER: {ID: "macbook-pro-silver", SRC: "../models/macbook-pro-silver.glb", TYPE: Kl.PRODUCT}
+        VISION_PRO: {ID: "apple-vision-pro", SRC: "./models/apple-vision-pro.glb", TYPE: Kl.PRODUCT},
+        PENCIL_PRO: {ID: "apple-pencil-pro", SRC: "./models/apple-pencil-pro.glb", TYPE: Kl.PRODUCT},
+        WATCH: {ID: "apple-watch", SRC: "./models/apple-watch.glb", TYPE: Kl.PRODUCT},
+        IMAC_GREEN: {ID: "imac-green", SRC: "./models/imac-green.glb", TYPE: Kl.PRODUCT},
+        IMAC_YELLOW: {ID: "imac-yellow", SRC: "./models/imac-yellow.glb", TYPE: Kl.PRODUCT},
+        IPHONE_16_PRO: {ID: "iphone-16-pro", SRC: "./models/iphone-16-pro.glb", TYPE: Kl.PRODUCT},
+        MBP_BLACK: {ID: "macbook-pro-black", SRC: "./models/macbook-pro-black.glb", TYPE: Kl.PRODUCT},
+        MBP_SILVER: {ID: "macbook-pro-silver", SRC: "./models/macbook-pro-silver.glb", TYPE: Kl.PRODUCT}
     }, rR = Object.keys(vm).map(A => vm[A]), _u = (A => (Object.keys(vm).forEach(t => {
         const i = vm[t];
         i.TYPE === Kl.PRODUCT && (A[t] = i.ID)
