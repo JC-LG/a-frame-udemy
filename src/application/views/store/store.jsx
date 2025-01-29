@@ -50,7 +50,7 @@ const Store = () => {
                      height="100"
                      width="100"
                      rotation="-90 0 0"
-                     position="0 0 -1"
+                     position="0 -0.1 -1"
             />
             <a-sky src={`#${IMAGE.YOSEMITE.ID}`}
                    radius="1000"
