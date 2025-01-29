@@ -67,9 +67,14 @@ export const MODEL = {
     //     SRC: `${ASSET_PREFIX}./models/apple-immersive-store-legacy.glb'
     //     TYPE: MODEL_TYPE.STAGE
     // },
+    // STORE: {
+    //     ID: 'apple-store',
+    //     SRC: `${ASSET_PREFIX}/models/apple-store2.glb`,
+    //     TYPE: MODEL_TYPE.STAGE
+    // },
     STORE: {
         ID: 'apple-store',
-        SRC: `${ASSET_PREFIX}/models/apple-store2.glb`,
+        SRC: `${ASSET_PREFIX}/models/apple-store-removed-roughness.glb`,
         TYPE: MODEL_TYPE.STAGE
     },
     VISION_PRO: {
