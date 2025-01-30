@@ -30,26 +30,26 @@ const Store = () => {
                       rotation="0 -17 0"
                       gltf-model={`#${MODEL.STORE.ID}`}
             />
-            <a-entity scale="0.02 0.02 0.02"
-                      position="9 1.4 -6.5"
-                      rotation="0 -17 0"
-                      gltf-model={`#${MODEL.VISION_PRO.ID}`}
+            {/*<a-entity scale="0.02 0.02 0.02"*/}
+            {/*          position="9 1.4 -6.5"*/}
+            {/*          rotation="0 -17 0"*/}
+            {/*          gltf-model={`#${MODEL.VISION_PRO.ID}`}*/}
+            {/*/>*/}
+            <a-entity scale="1.5 1.5 1.5"
+                      position="9.7 1.3 -7.5"
+                      rotation="0 80 0"
+                      gltf-model={`#${MODEL.IPHONE_16_PRO.ID}`}
             />
-            {/*<a-entity scale="1.5 1.5 1.5"*/}
-            {/*          position="9.7 1.3 -7.5"*/}
-            {/*          rotation="0 80 0"*/}
-            {/*          gltf-model={`#${MODEL.IPHONE_16_PRO.ID}`}*/}
-            {/*/>*/}
-            {/*<a-entity scale="0.2 0.2 0.2"*/}
-            {/*          position="20 1.25 -3"*/}
-            {/*          rotation="0 -110 0"*/}
-            {/*          gltf-model={`#${MODEL.MBP_BLACK.ID}`}*/}
-            {/*/>*/}
-            {/*<a-entity scale="0.2 0.2 0.2"*/}
-            {/*          position="20.5 1.25 -4.5"*/}
-            {/*          rotation="0 -110 0"*/}
-            {/*          gltf-model={`#${MODEL.MBP_SILVER.ID}`}*/}
-            {/*/>*/}
+            <a-entity scale="0.2 0.2 0.2"
+                      position="20 1.25 -3"
+                      rotation="0 -110 0"
+                      gltf-model={`#${MODEL.MBP_BLACK.ID}`}
+            />
+            <a-entity scale="0.2 0.2 0.2"
+                      position="20.5 1.25 -4.5"
+                      rotation="0 -110 0"
+                      gltf-model={`#${MODEL.MBP_SILVER.ID}`}
+            />
 
             {/*<a-plane src={`#${TEXTURE.BRICK.ID}`}*/}
             {/*         normal-map={`#${NORMAL_MAP.BRICK.ID}`}*/}
