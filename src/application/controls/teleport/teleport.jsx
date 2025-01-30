@@ -42,8 +42,8 @@ const Teleport = ({ children }) => {
             movement-controls={`speed: 0.15;
                                 camera: #${SCENE_ELEMENTS.HEAD};
                                 `}
-            position="1 0 -1"
-            rotation="0 0 0"
+            position="12.5 0 6"
+            rotation="0 -15 0"
         >
             <a-entity id={SCENE_ELEMENTS.HEAD} camera="near:0.01;" look-controls="pointerLockEnabled: false" position="0 1.65 0"/>
             <a-entity handy-controls={true}>
