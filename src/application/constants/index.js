@@ -62,9 +62,14 @@ const MODEL_TYPE = {
 };
 
 export const MODEL = {
+    CITY: {
+        ID: 'city',
+        SRC: `${ASSET_PREFIX}/models/city-low-poly.glb`,
+        TYPE: MODEL_TYPE.STAGE,
+    },
     STORE: {
         ID: 'apple-store',
-        SRC: `${ASSET_PREFIX}./models/new-store.glb`,
+        SRC: `${ASSET_PREFIX}/models/new-store.glb`,
         TYPE: MODEL_TYPE.STAGE,
     },
     // STORE: {
@@ -84,7 +89,7 @@ export const MODEL = {
     // },
     VISION_PRO: {
         ID: 'apple-vision-pro',
-        SRC: `${ASSET_PREFIX}/models/apple-vision-pro.glb`,
+        SRC: `${ASSET_PREFIX}/models/vision-pro.glb`,
         TYPE: MODEL_TYPE.PRODUCT
     },
     PENCIL_PRO: {
@@ -112,6 +117,11 @@ export const MODEL = {
         SRC: `${ASSET_PREFIX}/models/iphone-16-pro.glb`,
         TYPE: MODEL_TYPE.PRODUCT
     },
+    IPHONE_CASE: {
+        ID: 'iphone-case',
+        SRC: `${ASSET_PREFIX}/models/iphone-case.glb`,
+        TYPE: MODEL_TYPE.PRODUCT
+    },
     MBP_BLACK: {
         ID: 'macbook-pro-black',
         SRC: `${ASSET_PREFIX}/models/macbook-pro-black.glb`,
@@ -120,6 +130,11 @@ export const MODEL = {
     MBP_SILVER: {
         ID: 'macbook-pro-silver',
         SRC: `${ASSET_PREFIX}/models/macbook-pro-silver.glb`,
+        TYPE: MODEL_TYPE.PRODUCT
+    },
+    MAC_MINI: {
+        ID: 'mac-mini',
+        SRC: `${ASSET_PREFIX}/models/mac-mini.glb`,
         TYPE: MODEL_TYPE.PRODUCT
     }
 };
