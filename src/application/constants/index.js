@@ -7,6 +7,16 @@ export const SCENE_ELEMENTS = {
 };
 
 
+export const VIDEO = {
+    AVP: {
+        ID: 'avp-video',
+        SRC: `${ASSET_PREFIX}/videos/avp.mp4`
+    },
+};
+
+export const VIDEOS = Object.keys(VIDEO).map((key) => VIDEO[key]);
+
+
 export const IMAGE = {
     SKY: {
         ID: 'sky',
@@ -15,6 +25,10 @@ export const IMAGE = {
     YOSEMITE: {
         ID: 'yosemite',
         SRC: `${ASSET_PREFIX}/images/yosemite.jpg`
+    },
+    REST: {
+        ID: 'rest',
+        SRC: `${ASSET_PREFIX}/images/resting_place_16k.jpg`
     },
     SPACE: {
         ID: 'space',
@@ -62,6 +76,11 @@ const MODEL_TYPE = {
 };
 
 export const MODEL = {
+    LONDON: {
+        ID: 'london',
+        SRC: `${ASSET_PREFIX}/models/city-model-london.glb`,
+        TYPE: MODEL_TYPE.STAGE,
+    },
     CITY: {
         ID: 'city',
         SRC: `${ASSET_PREFIX}/models/city-low-poly.glb`,
@@ -120,6 +139,16 @@ export const MODEL = {
     IPHONE_CASE: {
         ID: 'iphone-case',
         SRC: `${ASSET_PREFIX}/models/iphone-case.glb`,
+        TYPE: MODEL_TYPE.PRODUCT
+    },
+    IPAD_PRO_V1: {
+        ID: 'ipad-pro-v1',
+        SRC: `${ASSET_PREFIX}/models/ipad-pro-v1.glb`,
+        TYPE: MODEL_TYPE.PRODUCT
+    },
+    IPAD_PRO_V2: {
+        ID: 'ipad-pro-v2',
+        SRC: `${ASSET_PREFIX}/models/ipad-pro-v2.glb`,
         TYPE: MODEL_TYPE.PRODUCT
     },
     MBP_BLACK: {

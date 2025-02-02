@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router';
 
-import { MODEL, TEXTURE, NORMAL_MAP, IMAGE } from '../../constants';
+import {MODEL, TEXTURE, NORMAL_MAP, IMAGE, VIDEO, VIDEOS} from '../../constants';
 import { ROUTES } from '../../../router/router';
 
 const Store = () => {
@@ -25,17 +25,19 @@ const Store = () => {
 
     return (
         <>
-            <a-entity
-                // scale="0.9 0.9 0.9"
-                //       position="3 -10.1 -4.5"
-                //       rotation="0 -17 0"
+            {/*<a-entity*/}
+            {/*    // scale="0.9 0.9 0.9"*/}
+            {/*    //       position="3 -10.1 -4.5"*/}
+            {/*    //       rotation="0 -17 0"*/}
 
 
-                scale="0.9 0.9 0.9" position="3 -0.28041 14.55563" rotation="0 -17 0"
+            {/*    scale="50 50 50"*/}
+            {/*    position="0 11.5 0"*/}
+            {/*    rotation="0 10 0"*/}
 
 
-                gltf-model={`#${MODEL.CITY.ID}`}
-            />
+            {/*    gltf-model={`#${MODEL.LONDON.ID}`}*/}
+            {/*/>*/}
 
             <a-entity scale="0.9 0.9 0.9"
                       position="3 0 -4.5"
@@ -67,10 +69,12 @@ const Store = () => {
                       gltf-model={`#${MODEL.IPHONE_16_PRO.ID}`}
             />
 
-            <a-entity scale="1.5 1.5 1.5"
-                      position="16.8167 1.11 -12.41127"
-                      rotation="-11.523 -25.047 0"
-                      gltf-model={`#${MODEL.IPHONE_16_PRO.ID}`}
+            <a-entity
+
+
+                scale="0.7 0.7 0.7" position="16.83006 0.61829 -12.21599" rotation="14.999999999999998 -200 0"
+
+                gltf-model={`#${MODEL.IPAD_PRO_V1.ID}`}
             />
 
             {/* Front-Left : iMacs */}
@@ -86,15 +90,27 @@ const Store = () => {
             />
 
             {/* Bottom-Left : Mac Mini */}
+
             <a-entity
-                scale="0.10956 0.10956 0.10956" position="9.81985 1.20164 -11.01841" rotation="0 73.18561804544545 0"
+                scale="0.07 0.07 0.07" position="9.8509 1.1517 -10.83134" rotation="0 73.18561804544545 0"
                 gltf-model={`#${MODEL.MAC_MINI.ID}`}
             />
 
 
-            <a-entity scale="0.10956 0.10956 0.10956" position="10.15384 1.20164 -12.05424"
-                      rotation="0 -104.47255140635919 0"
-                      gltf-model={`#${MODEL.MAC_MINI.ID}`}
+            <a-entity
+                scale="0.0002 0.0002 0.0002"
+                position="10.09236 1.1805 -11.627"
+                rotation="47.02092737300127 74.63462830933129 0.6967166788790811"
+                gltf-model={`#${MODEL.WATCH.ID}`}
+            />
+
+            <a-entity
+
+                scale="1.2 1.2 1.2"
+                position="10.58772 1.119 -12.29281" rotation="0 -18.453251707778424 0"
+
+
+                gltf-model={`#${MODEL.IPAD_PRO_V2.ID}`}
             />
 
 
@@ -112,16 +128,23 @@ const Store = () => {
 
             {/* Bottom-Right Table : AVPs */}
 
-
             <a-entity scale="" position="19.75326 1.18196 -7.78245" rotation="0 -167.1953871549207 0"
                       gltf-model={`#${MODEL.VISION_PRO.ID}`}
             />
 
             <a-entity scale="" position="20.19826 1.18196 -9.35461" rotation="0 -167.1953871549207 0"
-                      gltf-model={`#${MODEL.VISION_PRO.ID}`} />
+                      gltf-model={`#${MODEL.VISION_PRO.ID}`}/>
 
             <a-entity scale="" position="19.98681 1.182 -8.6473" rotation="0 -167.195 0"
                       gltf-model={`#${MODEL.VISION_PRO.ID}`}/>
+
+            <a-video src={`#${VIDEO.AVP.ID}`}
+                     width="3"
+                     height="1.5"
+                     position="22 1.33266 -13"
+                     rotation="0 -50 0"
+                     scale="1.76112 1.76112 1.76112"
+                />
 
 
             <a-plane src={`#${TEXTURE.GRASS.ID}`}
@@ -135,13 +158,14 @@ const Store = () => {
                      rotation="-90 -17 0"
                      position="0 -0.2 -2"
             />
-            <a-sky src={`#${IMAGE.YOSEMITE.ID}`}
+            <a-sky src={`#${IMAGE.REST.ID}`}
                    radius="300"
-                   position="0 0 0"
-                   rotation="0 -10 0"
+                   position="0 30 0"
+                   rotation="0 -150 0"
             />
-        </>
-    )
-};
+
+            </>
+            )
+            };
 
 export default Store;
