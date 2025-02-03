@@ -138,13 +138,13 @@ const Store = () => {
             <a-entity scale="" position="19.98681 1.182 -8.6473" rotation="0 -167.195 0"
                       gltf-model={`#${MODEL.VISION_PRO.ID}`}/>
 
-            <a-video src={`#${VIDEO.AVP.ID}`}
-                     width="3"
-                     height="1.5"
-                     position="22 1.33266 -13"
-                     rotation="0 -50 0"
-                     scale="1.76112 1.76112 1.76112"
-                />
+            {/*<a-video src={`#${VIDEO.AVP.ID}`}*/}
+            {/*         width="3"*/}
+            {/*         height="1.5"*/}
+            {/*         position="23.5 1.33266 -13"*/}
+            {/*         rotation="0 -50 0"*/}
+            {/*         scale="1.76112 1.76112 1.76112"*/}
+            {/*    />*/}
 
 
             <a-plane src={`#${TEXTURE.GRASS.ID}`}
@@ -158,11 +158,11 @@ const Store = () => {
                      rotation="-90 -17 0"
                      position="0 -0.2 -2"
             />
-            <a-sky src={`#${IMAGE.REST.ID}`}
-                   radius="300"
-                   position="0 30 0"
-                   rotation="0 -150 0"
-            />
+            {/*<a-sky src={`#${IMAGE.REST.ID}`}*/}
+            {/*       radius="300"*/}
+            {/*       position="0 30 0"*/}
+            {/*       rotation="0 -150 0"*/}
+            {/*/>*/}
 
             </>
             )

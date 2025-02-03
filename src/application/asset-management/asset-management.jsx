@@ -21,7 +21,7 @@ const AssetManagement = () => {
             ))}
             {VIDEOS.map(({ID, SRC}) => (
                 <video key={ID} id={ID} src={SRC}
-                       autoPlay={true}
+                       autoPlay={PROD}
                        loop={true}
                 />
             ))}
