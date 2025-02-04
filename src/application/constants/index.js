@@ -113,7 +113,8 @@ export const MODEL = {
     },
     IMAC_GREEN: {
         ID: 'imac-green',
-        SRC: `${ASSET_PREFIX}/models/imac-green.glb`,
+        // SRC: `${ASSET_PREFIX}/models/imac-green.glb`,
+        SRC: `${ASSET_PREFIX}/models/test-imac.glb`,
         TYPE: MODEL_TYPE.PRODUCT
     },
     IMAC_YELLOW: {

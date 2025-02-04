@@ -34,13 +34,13 @@ const PRODUCT_TO_RENDER = [
     // Table: Front-Left : iMac(s)
     {
         model: MODEL.IMAC_YELLOW.ID,
-        scale: '0.13851 0.13851 0.13851',
+        scale: '0.12 0.12 0.12',
         position: '9.02465 1.10237 -7.57484',
         rotation: '0 -106.25 0',
     },
     {
         model: MODEL.IMAC_GREEN.ID,
-        scale: '0.00015 0.00015 0.00015',
+        scale: '0.04 0.04 0.04',
         position: '8.27273 1.10237 -6.32263',
         rotation: '0 70 0',
     },
