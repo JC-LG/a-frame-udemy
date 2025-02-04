@@ -19,12 +19,12 @@ const AssetManagement = () => {
             {ALL_IMAGES.map(({ID, SRC}) => (
                 <img key={ID} id={ID} src={SRC}/>
             ))}
-            {VIDEOS.map(({ID, SRC}) => (
-                <video key={ID} id={ID} src={SRC}
-                       autoPlay={PROD}
-                       loop={true}
-                />
-            ))}
+            {/*{VIDEOS.map(({ID, SRC}) => (*/}
+            {/*    <video key={ID} id={ID} src={SRC}*/}
+            {/*           autoPlay={PROD}*/}
+            {/*           loop={true}*/}
+            {/*    />*/}
+            {/*))}*/}
             <a-mixin id="blink"
                  blink-controls={`
                             rotateOnTeleport: false;
