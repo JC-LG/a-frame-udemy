@@ -13,20 +13,20 @@ import { ApplicationContextProvider } from './application/context/application-co
 import { Router } from './router/router';
 
 import './style.css';
-import {injectScript} from "./application/utils/dom.js";
+import { injectScript } from "./application/utils/dom.js";
 
 const HANDY_WORK_CDN_URL =  'https://cdn.jsdelivr.net/npm/handy-work@3.1.11/build/handy-controls.min.js';
 injectScript({
     // src: `${HANDY_WORK_CDN_URL}?pulled=${Date.now()}`,
     src: HANDY_WORK_CDN_URL,
     attributes: { defer: true }
+}).then(() => {
+    ReactDOM.createRoot(document.getElementById('app')).render(
+        <React.StrictMode>
+            <ApplicationContextProvider>
+                <Router />
+            </ApplicationContextProvider>
+        </React.StrictMode>
+    );
 });
-
-ReactDOM.createRoot(document.getElementById('app')).render(
-    <React.StrictMode>
-        <ApplicationContextProvider>
-            <Router />
-        </ApplicationContextProvider>
-    </React.StrictMode>
-);
 

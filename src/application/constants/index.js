@@ -26,9 +26,9 @@ export const IMAGE = {
         ID: 'yosemite',
         SRC: `${ASSET_PREFIX}/images/yosemite.jpg`
     },
-    REST: {
-        ID: 'rest',
-        SRC: `${ASSET_PREFIX}/images/resting_place_16k.jpg`
+    STREET: {
+        ID: 'street',
+        SRC: `${ASSET_PREFIX}/images/street.jpg`
     },
     SPACE: {
         ID: 'space',
@@ -76,16 +76,6 @@ const MODEL_TYPE = {
 };
 
 export const MODEL = {
-    LONDON: {
-        ID: 'london',
-        SRC: `${ASSET_PREFIX}/models/city-model-london.glb`,
-        TYPE: MODEL_TYPE.STAGE,
-    },
-    CITY: {
-        ID: 'city',
-        SRC: `${ASSET_PREFIX}/models/city-low-poly.glb`,
-        TYPE: MODEL_TYPE.STAGE,
-    },
     STORE: {
         ID: 'apple-store',
         SRC: `${ASSET_PREFIX}/models/new-store.glb`,
@@ -181,8 +171,8 @@ export const PRODUCT = ((productMap) => {
 
 export const PRODUCT_SETTINGS = {
     [PRODUCT.VISION_PRO]: {
-        SCALE: { x: 0.03, y: 0.03, z: 0.03 },
-        POSITION: { y: 1.6, z: -1 }
+        SCALE: { x: 10, y: 10, z: 10 },
+        POSITION: { x: 12, y: 1.6, z: -1 }
     },
     [PRODUCT.PENCIL_PRO]: {
         SCALE: { x: 4, y: 4, z: 4 },
