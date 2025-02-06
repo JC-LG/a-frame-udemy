@@ -1,5 +1,5 @@
 const { PROD} = import.meta.env;
-const ASSET_PREFIX = PROD ? '' : '';
+const ASSET_PREFIX = PROD ? './' : '';
 
 export const SCENE_ELEMENTS = {
     CAMERA_RIG: 'cameraRig',
