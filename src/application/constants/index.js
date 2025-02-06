@@ -1,5 +1,5 @@
 const { PROD} = import.meta.env;
-const ASSET_PREFIX = PROD ? './' : '';
+const ASSET_PREFIX = PROD ? '' : '';
 
 export const SCENE_ELEMENTS = {
     CAMERA_RIG: 'cameraRig',
@@ -29,6 +29,10 @@ export const IMAGE = {
     STREET: {
         ID: 'street',
         SRC: `${ASSET_PREFIX}/images/street.jpg`
+    },
+    SIGN: {
+        ID: 'sign-apple',
+        SRC: `${ASSET_PREFIX}/images/sign-apple.png`
     },
     SPACE: {
         ID: 'space',
@@ -113,7 +117,6 @@ export const MODEL = {
     },
     IMAC_GREEN: {
         ID: 'imac-green',
-        // SRC: `${ASSET_PREFIX}/models/imac-green.glb`,
         SRC: `${ASSET_PREFIX}/models/test-imac.glb`,
         TYPE: MODEL_TYPE.PRODUCT
     },
@@ -134,12 +137,12 @@ export const MODEL = {
     },
     IPAD_PRO_V1: {
         ID: 'ipad-pro-v1',
-        SRC: `${ASSET_PREFIX}/models/ipad-pro-v1.glb`,
+        SRC: `${ASSET_PREFIX}/models/updated-ipad-v1.glb`,
         TYPE: MODEL_TYPE.PRODUCT
     },
     IPAD_PRO_V2: {
         ID: 'ipad-pro-v2',
-        SRC: `${ASSET_PREFIX}/models/ipad-pro-v2.glb`,
+        SRC: `${ASSET_PREFIX}/models/updated-ipad-v2.glb`,
         TYPE: MODEL_TYPE.PRODUCT
     },
     MBP_BLACK: {

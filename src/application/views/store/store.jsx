@@ -21,13 +21,13 @@ const PRODUCT_TO_RENDER = [
     {
         model: MODEL.IPHONE_16_PRO.ID,
         scale: '1.5 1.5 1.5',
-        position: '16.24053 1.11046 -12.55874',
+        position: '16.24053 1.12 -12.55874',
         rotation: '-11.522754217875987 -25.046850014143935 0',
     },
     {
         model: MODEL.IPAD_PRO_V1.ID,
-        scale: '0.7 0.7 0.7',
-        position: '16.83006 0.61829 -12.21599',
+        scale: '0.6 0.6 0.6',
+        position: '16.83006 0.7 -12.21599',
         rotation: '14.99 -200 0',
     },
 
@@ -123,7 +123,6 @@ const Store = () => {
 
     return (
         <>
-
             <a-entity scale="0.9 0.9 0.9"
                       position="3 0 -4.5"
                       rotation="0 -17 0"
@@ -156,6 +155,13 @@ const Store = () => {
                     rotation={product.rotation}
                 />
             ))}
+
+            <a-image src={`#${IMAGE.SIGN.ID}`}
+                     position="20.5 .7 -16"
+                     rotation="0 -25 0"
+                     width=".8"
+                     height="1.3"
+            />
 
             {/*
             <a-video src={`#${VIDEO.AVP.ID}`}
